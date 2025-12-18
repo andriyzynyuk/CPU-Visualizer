@@ -28,7 +28,7 @@ This project is intended to be both a **learning tool** and a **technical showca
 
 ---
 
-## 🛠 Planned Features
+## Planned Features
 
 - C++ simulation of logic gates, wires, and modules
 - Cycle-based CPU simulation
@@ -36,4 +36,3 @@ This project is intended to be both a **learning tool** and a **technical showca
 - Live visualization of signal values on wires and gates
 - Step-by-step execution and clock control
 - React-based frontend for scalable UI architecture
-
