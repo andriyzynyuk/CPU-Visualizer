@@ -21,8 +21,8 @@ This project is intended to be both a **learning tool** and a **technical showca
 
 ## Current Features
 
-- SVG-based diagrams for CPU and ALU components
-- Zoom and pan interaction using `svg-pan-zoom`
+- SVG-based diagrams for ALU components
+- Zoom and pan interaction using `react-zoom-pan-pinch`
 - Clickable SVG elements for navigation between diagrams
 - Organized SVG structure with logical grouping (modules, wires, gates)
 
