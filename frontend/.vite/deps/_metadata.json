@@ -1,0 +1,31 @@
+{
+  "hash": "ca3c27f0",
+  "configHash": "af1a6510",
+  "lockfileHash": "65d1cf13",
+  "browserHash": "0496f241",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "ae6209b7",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "eca9192e",
+      "needsInterop": true
+    },
+    "react-zoom-pan-pinch": {
+      "src": "../../node_modules/react-zoom-pan-pinch/dist/index.esm.js",
+      "file": "react-zoom-pan-pinch.js",
+      "fileHash": "56727e10",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-R4VOGKSS": {
+      "file": "chunk-R4VOGKSS.js"
+    }
+  }
+}

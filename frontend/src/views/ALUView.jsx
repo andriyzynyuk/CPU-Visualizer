@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { simulateALU } from "../sim/alu";
 
 export default function ALUView({ onNavigate }) {
-  const [svgContent, setSvgContent] = useState(null);
+  const [svgContent, setSvgContent] = useState("");
+  const [aluState, setAluState] = useState(null);
 
   useEffect(() => {
     fetch("/svg/ALU.svg")
@@ -106,9 +108,31 @@ export default function ALUView({ onNavigate }) {
     };
   }, [svgContent, onNavigate]);
 
+  //simulation
+  useEffect(() => {
+    const state = simulateALU({
+      x: 0b0000,
+      y: 0b0001,
+      shiftDirection: 1,
+      AddSub: 0,
+      logicFunc: 0b10,
+      funcClass: 0b10,
+    });
+
+    setAluState(state);
+  }, []);
+
+  useEffect(() => {
+      if (!aluState || !svgContent) return;
+
+      setWireActive("WireX_ALU", aluState.inputs.x);
+      setWireActive("WireY_ALU", aluState.inputs.y);
+  }, [aluState, svgContent]);
+
   return (
     <div className="diagram-container">
         <h2>Arithmetic Logic Unit</h2>
+
         <TransformWrapper 
             minScale={0.3}
             maxScale={20}
@@ -125,4 +149,16 @@ export default function ALUView({ onNavigate }) {
         </TransformWrapper>
     </div>
   );
+}
+
+function setWireActive(id, value) {
+  const el = document.getElementById(id);
+  if (!el) {
+    console.warn("Wire not found: ", id);
+    return;
+  }
+
+  const active = value !== 0;
+
+  el.setAttribute("fill", active ? "lime" : "black");
 }
