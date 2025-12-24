@@ -1,4 +1,4 @@
-export function simulateALU({ x, y, shiftDirection, AddSub, logicFunc, funcClass }) {
+export function simulateALU({ x, y, shiftDirection, AddSub, logicFunc, funcClass, constAmount, constVar }) {
         x &= 0b1111;
         y &= 0b1111;
     
@@ -8,9 +8,21 @@ export function simulateALU({ x, y, shiftDirection, AddSub, logicFunc, funcClass
         let logic = 0b0000;
         let carry = 0;
         let s = 0b0000;
+        let variableAmount = x & 0b11;
+        let amount = 0b00;
+
+        switch(constVar) {
+            case 0b0:
+                amount = constAmount;
+            break;
+
+            case 0b1:
+                amount = variableAmount;//2 lsb of x
+            break;
+        }
 
         //shifter
-        shiftedY = shiftDirection ? (y << 1) : (y >> 1);
+        shiftedY = shiftDirection ? (y << amount) : (y >> amount);
         shiftedY &= 0b1111;
 
         //Adder
@@ -40,6 +52,8 @@ export function simulateALU({ x, y, shiftDirection, AddSub, logicFunc, funcClass
             break;
         }
 
+        let msb = xPlusY > 0 ? 0b1111 : 0b0000;
+
         //Select Output
         switch (funcClass) {
             case 0b00:
@@ -47,7 +61,7 @@ export function simulateALU({ x, y, shiftDirection, AddSub, logicFunc, funcClass
             break;
 
             case 0b01:
-                s = carry ? 0b1111 : 0b0000;
+                s = msb;
             break;
 
             case 0b10:
@@ -68,7 +82,9 @@ export function simulateALU({ x, y, shiftDirection, AddSub, logicFunc, funcClass
                 shiftDirection,
                 AddSub,
                 logicFunc,
-                funcClass
+                funcClass,
+                constAmount,
+                constVar
             },
 
             internal: {
@@ -76,7 +92,10 @@ export function simulateALU({ x, y, shiftDirection, AddSub, logicFunc, funcClass
                 xorY,
                 xPlusY,
                 logic,
-                carry
+                carry,
+                variableAmount,
+                amount,
+                msb
             },
 
             output: {
