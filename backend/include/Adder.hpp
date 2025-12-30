@@ -1,0 +1,27 @@
+#pragma once
+
+#include <vector>
+#include "Component.hpp"
+#include "Wire.hpp"
+#include "FullAdder.hpp"
+
+struct Adder : Component {
+    // Inputs
+    Wire *x;
+    Wire *y;
+    Wire *cin;
+
+    // Internal wires
+    std::vector<Wire> X_bits, Y_bits, sum_bits, carries;
+
+    // Output
+    Wire &sum;
+    Wire &cout;
+
+    // Gates
+    FullAdder* fullAdders[32];
+
+    Adder(Wire* X, Wire* Y, Wire* C_IN, Wire& SUM, Wire& C_OUT);
+    ~Adder();
+    void eval() override;
+};

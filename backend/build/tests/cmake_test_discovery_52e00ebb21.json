@@ -1,0 +1,33 @@
+{
+  "tests": 3,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "WireTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "MaskingWorks",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_wire.cpp",
+          "line": 4
+        },
+        {
+          "name": "GetBit",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_wire.cpp",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "name": "FullAdderTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "AdditionTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_fullAdder.cpp",
+          "line": 4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/ZERO_CHECK.dir

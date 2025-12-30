@@ -1,0 +1,5 @@
+cpu_tests_NOT_BUILT 0 0
+WireTest.MaskingWorks 3 0.0074466
+WireTest.GetBit 3 0.00748313
+FullAdderTest.AdditionTest 2 0.011377
+---
