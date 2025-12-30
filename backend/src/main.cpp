@@ -14,7 +14,7 @@ int main() {
     Y.set(100);
     C_IN.set(0);
 
-    FullAdder adder(&X, &Y, &C_IN, SUM, C_OUT);
+    Adder adder(&X, &Y, &C_IN, SUM, C_OUT);
     adder.eval();
 
     std::cout << "X:" << X.getValue() << " Y:" << Y.getValue() << " c_in: " << C_IN.getValue() << std::endl;
