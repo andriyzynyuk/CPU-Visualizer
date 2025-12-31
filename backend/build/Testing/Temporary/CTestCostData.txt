@@ -1,5 +1,13 @@
 cpu_tests_NOT_BUILT 0 0
-WireTest.MaskingWorks 3 0.0074466
-WireTest.GetBit 3 0.00748313
-FullAdderTest.AdditionTest 2 0.011377
+WireTest.MaskingWorks 8 0.0028845
+WireTest.GetBit 8 0.00281565
+FullAdderTest.AdditionTest 7 0.00322066
+AdderTest.AdderAdditionTest 3 0.00790827
+GatesTest.AndGateTest 2 0.011618
+GatesTest.OrGateTest 2 0.0114352
+GatesTest.XorGateTest 2 0.0120821
+GatesTest.NotGateTest 2 0.0112578
+ShifterTest.LeftShiftTest 1 0.023835
+ShifterTest.RightShiftTest 1 0.0240428
+ShifterTest.EdgeCases 1 0.0238755
 ---

@@ -14,6 +14,7 @@ add_library(cpu_sim
     src/Gates.cpp
     src/FullAdder.cpp
     src/Adder.cpp
+    src/Shifter.cpp
 )
 
 target_include_directories(cpu_sim PUBLIC include)

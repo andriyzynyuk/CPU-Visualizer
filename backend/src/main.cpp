@@ -10,7 +10,7 @@ int main() {
     Wire SUM(32);
     Wire C_OUT(1);
 
-    X.set(100);
+    X.set(101);
     Y.set(100);
     C_IN.set(0);
 

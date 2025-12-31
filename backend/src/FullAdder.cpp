@@ -11,7 +11,7 @@ FullAdder::FullAdder(Wire* X, Wire* Y, Wire* C_IN, Wire& SUM, Wire& C_OUT)
         orGate0({&and0, &and1}, cout)
 {}
 
-//just set fuck it
+
 
 void FullAdder::eval(){
     xorGate0.eval();

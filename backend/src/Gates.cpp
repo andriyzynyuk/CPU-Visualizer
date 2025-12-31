@@ -32,3 +32,11 @@ void XorGate::eval(){
     }
     output.set(result);
 }
+
+NotGate::NotGate(Wire* in, Wire& out)
+    : input(in), output(out) {}
+
+void NotGate::eval() {
+    uint32_t result = ~(input->getValue());
+    output.set(result);
+}

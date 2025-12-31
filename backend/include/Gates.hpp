@@ -27,3 +27,11 @@ struct XorGate : Component {
     XorGate(const std::vector<Wire*>& in, Wire& out);
     void eval() override;
 };
+
+struct NotGate : Component {
+    Wire* input;
+    Wire& output;
+
+    NotGate(Wire* in, Wire& out);
+    void eval() override;
+};

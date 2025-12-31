@@ -13,6 +13,8 @@ add_executable(cpu_tests
     test_gates.cpp
     test_wire.cpp
     test_fullAdder.cpp
+    test_adder.cpp
+    test_shifter.cpp
 )
 
 target_link_libraries(cpu_tests

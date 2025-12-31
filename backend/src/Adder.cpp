@@ -23,6 +23,12 @@ Adder::~Adder() {
 
 void Adder::eval() {
     for (int i = 0; i < 32; i++) {
+        X_bits[i].set(x->getBit(i));
+        Y_bits[i].set(y->getBit(i));
+    }
+    carries[0].set(cin->getValue() & 1);
+
+    for (int i = 0; i < 32; i++) {
         fullAdders[i]->eval();
         sum.setBit(i, sum_bits[i].getValue());
     }

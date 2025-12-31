@@ -427,6 +427,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_gates.cpp" />
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_wire.cpp" />
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_fullAdder.cpp" />
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_adder.cpp" />
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_shifter.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

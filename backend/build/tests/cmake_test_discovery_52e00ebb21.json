@@ -1,7 +1,33 @@
 {
-  "tests": 3,
+  "tests": 11,
   "name": "AllTests",
   "testsuites": [
+    {
+      "name": "GatesTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "AndGateTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
+          "line": 4
+        },
+        {
+          "name": "OrGateTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
+          "line": 24
+        },
+        {
+          "name": "XorGateTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
+          "line": 44
+        },
+        {
+          "name": "NotGateTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
+          "line": 64
+        }
+      ]
+    },
     {
       "name": "WireTest",
       "tests": 2,
@@ -26,6 +52,38 @@
           "name": "AdditionTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_fullAdder.cpp",
           "line": 4
+        }
+      ]
+    },
+    {
+      "name": "AdderTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "AdderAdditionTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_adder.cpp",
+          "line": 4
+        }
+      ]
+    },
+    {
+      "name": "ShifterTest",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "LeftShiftTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_shifter.cpp",
+          "line": 4
+        },
+        {
+          "name": "RightShiftTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_shifter.cpp",
+          "line": 25
+        },
+        {
+          "name": "EdgeCases",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_shifter.cpp",
+          "line": 46
         }
       ]
     }
