@@ -1,0 +1,24 @@
+cpu_tests_NOT_BUILT 0 0
+WireTest.MaskingWorks 19 0.00101091
+WireTest.GetBit 19 0.00105721
+FullAdderTest.AdditionTest 18 0.00105951
+AdderTest.AdderAdditionTest 14 0.00138471
+GatesTest.AndGateTest 13 0.00143972
+GatesTest.OrGateTest 13 0.00138393
+GatesTest.XorGateTest 13 0.00138914
+GatesTest.NotGateTest 13 0.00140772
+ShifterTest.LeftShiftTest 12 0.00160754
+ShifterTest.RightShiftTest 12 0.00162137
+ShifterTest.EdgeCases 12 0.0016628
+MUXTest.MUX4to1Test 12 0.00170566
+MUXTest.MUX2to1Test 11 0.00181925
+LUTest.LogicOperationsTest 10 0.00190844
+SignExtenderTest.PositiveExtension 11 0.00185072
+SignExtenderTest.NegativeExtension 11 0.00174115
+SignExtenderTest.DifferentSizes 11 0.00175876
+ALUTest.ALUAddTest 0 0
+ALUTest.ALULogicTest 7 0.00282906
+ALUTest.ALUShifterTest 7 0.00270063
+ALUTest.ALUSetLessThanTest 7 0.0027931
+ALUTest.ALUAdderTest 3 0.00696137
+---

@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/cpu_tests[1]_tests.cmake")
+  include("C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/cpu_tests[1]_tests.cmake")
+else()
+  add_test(cpu_tests_NOT_BUILT cpu_tests_NOT_BUILT)
+endif()
