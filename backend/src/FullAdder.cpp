@@ -2,8 +2,10 @@
 
 FullAdder::FullAdder(Wire* X, Wire* Y, Wire* C_IN, Wire& SUM, Wire& C_OUT)
     :x(X), y(Y), cin(C_IN),
-        xor0(1), and0(1), and1(1),
         sum(SUM), cout(C_OUT),
+
+        xor0(1), and0(1), and1(1),
+        
         xorGate0({x, y}, xor0),
         andGate0({x, y}, and0),
         xorGate1({&xor0, cin}, sum),

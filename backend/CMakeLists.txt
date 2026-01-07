@@ -15,6 +15,10 @@ add_library(cpu_sim
     src/FullAdder.cpp
     src/Adder.cpp
     src/Shifter.cpp
+    src/MUX.cpp
+    src/LU.cpp
+    src/SignExtender.cpp
+    src/ALU.cpp
 )
 
 target_include_directories(cpu_sim PUBLIC include)

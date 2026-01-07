@@ -33,6 +33,17 @@ void XorGate::eval(){
     output.set(result);
 }
 
+NorGate::NorGate(const std::vector<Wire*>& in, Wire& out)
+    : inputs(in), output(out) {}
+
+void NorGate::eval(){
+    uint32_t result = 0;
+    for (auto w : inputs) {
+        result |= w->getValue();
+    }
+    output.set(~result);
+}
+
 NotGate::NotGate(Wire* in, Wire& out)
     : input(in), output(out) {}
 

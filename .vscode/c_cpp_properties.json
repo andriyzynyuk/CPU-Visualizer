@@ -6,10 +6,11 @@
                 "${workspaceFolder}/backend/include"
             ],
             "defines": [],
-            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",  // Adjust if different
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
             "cStandard": "c17",
             "cppStandard": "c++20",
-            "intelliSenseMode": "gcc-x64"
+            "intelliSenseMode": "gcc-x64",
+            "compileCommands": "${workspaceFolder}/backend/build/compile_commands.json"
         }
     ],
     "version": 4

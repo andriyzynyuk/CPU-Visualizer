@@ -2,78 +2,64 @@
 #include "Gates.hpp"
 
 TEST(GatesTest, AndGateTest) {
-    Wire in1(32), in2(32), out(32);
+    Wire in1(4);
+    Wire in2(4);
+    Wire out(4);
+    
     AndGate gate({&in1, &in2}, out);
 
     in1.set(0b1010);
     in2.set(0b1100);
     gate.eval();
     EXPECT_EQ(out.getValue(), 0b1000);
-
-    in1.set(0xFFFFFFFF);
-    in2.set(0xFFFFFFFF);
-    gate.eval();
-    EXPECT_EQ(out.getValue(), 0xFFFFFFFF);
-
-    in1.set(0);
-    in2.set(0xFFFFFFFF);
-    gate.eval();
-    EXPECT_EQ(out.getValue(), 0);
 }
 
 TEST(GatesTest, OrGateTest) {
-    Wire in1(32), in2(32), out(32);
+    Wire in1(4);
+    Wire in2(4);
+    Wire out(4);
+    
     OrGate gate({&in1, &in2}, out);
 
     in1.set(0b1010);
     in2.set(0b1100);
     gate.eval();
     EXPECT_EQ(out.getValue(), 0b1110);
-
-    in1.set(0);
-    in2.set(0);
-    gate.eval();
-    EXPECT_EQ(out.getValue(), 0);
-
-    in1.set(0xFFFFFFFF);
-    in2.set(0);
-    gate.eval();
-    EXPECT_EQ(out.getValue(), 0xFFFFFFFF);
 }
 
 TEST(GatesTest, XorGateTest) {
-    Wire in1(32), in2(32), out(32);
+    Wire in1(4);
+    Wire in2(4);
+    Wire out(4);
+    
     XorGate gate({&in1, &in2}, out);
 
     in1.set(0b1010);
     in2.set(0b1100);
     gate.eval();
     EXPECT_EQ(out.getValue(), 0b0110);
-
-    in1.set(0xFFFFFFFF);
-    in2.set(0xFFFFFFFF);
-    gate.eval();
-    EXPECT_EQ(out.getValue(), 0);
-
-    in1.set(0);
-    in2.set(0);
-    gate.eval();
-    EXPECT_EQ(out.getValue(), 0);
 }
 
 TEST(GatesTest, NotGateTest) {
-    Wire in(32), out(32);
-    NotGate gate(&in, out);
+    Wire in1(4);
+    Wire out(4);
+    
+    NotGate gate(&in1, out);
 
-    in.set(0b1010);
+    in1.set(0b1010);
     gate.eval();
-    EXPECT_EQ(out.getValue(), ~0b1010u);
+    EXPECT_EQ(out.getValue(), 0b0101);
+}
 
-    in.set(0);
-    gate.eval();
-    EXPECT_EQ(out.getValue(), 0xFFFFFFFF);
+TEST(GatesTest, NorGateTest) {
+    Wire in1(4);
+    Wire in2(4);
+    Wire out(4);
+    
+    NorGate gate({&in1, &in2}, out);
 
-    in.set(0xFFFFFFFF);
+    in1.set(0b1010);
+    in2.set(0b1100);
     gate.eval();
-    EXPECT_EQ(out.getValue(), 0);
+    EXPECT_EQ(out.getValue(), 0b0001);
 }

@@ -1,10 +1,10 @@
 {
-  "tests": 11,
+  "tests": 21,
   "name": "AllTests",
   "testsuites": [
     {
       "name": "GatesTest",
-      "tests": 4,
+      "tests": 5,
       "testsuite": [
         {
           "name": "AndGateTest",
@@ -14,17 +14,22 @@
         {
           "name": "OrGateTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
-          "line": 24
+          "line": 17
         },
         {
           "name": "XorGateTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
-          "line": 44
+          "line": 30
         },
         {
           "name": "NotGateTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
-          "line": 64
+          "line": 43
+        },
+        {
+          "name": "NorGateTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
+          "line": 54
         }
       ]
     },
@@ -68,22 +73,91 @@
     },
     {
       "name": "ShifterTest",
-      "tests": 3,
+      "tests": 2,
       "testsuite": [
         {
-          "name": "LeftShiftTest",
+          "name": "RightShiftTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_shifter.cpp",
           "line": 4
         },
         {
-          "name": "RightShiftTest",
+          "name": "LeftShiftTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_shifter.cpp",
-          "line": 25
+          "line": 21
+        }
+      ]
+    },
+    {
+      "name": "MUXTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "MUX4to1Test",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_mux.cpp",
+          "line": 4
         },
         {
-          "name": "EdgeCases",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_shifter.cpp",
+          "name": "MUX2to1Test",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_mux.cpp",
           "line": 46
+        }
+      ]
+    },
+    {
+      "name": "LUTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "LogicOperationsTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_lu.cpp",
+          "line": 4
+        }
+      ]
+    },
+    {
+      "name": "SignExtenderTest",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "PositiveExtension",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_signextender.cpp",
+          "line": 4
+        },
+        {
+          "name": "NegativeExtension",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_signextender.cpp",
+          "line": 16
+        },
+        {
+          "name": "DifferentSizes",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_signextender.cpp",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "name": "ALUTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "ALUShifterTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_alu.cpp",
+          "line": 4
+        },
+        {
+          "name": "ALUSetLessThanTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_alu.cpp",
+          "line": 46
+        },
+        {
+          "name": "ALUAdderTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_alu.cpp",
+          "line": 82
+        },
+        {
+          "name": "ALULogicTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_alu.cpp",
+          "line": 112
         }
       ]
     }

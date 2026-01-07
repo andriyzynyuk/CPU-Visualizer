@@ -16,6 +16,18 @@
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_shifter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_mux.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_lu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_signextender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_alu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\CMakeLists.txt" />

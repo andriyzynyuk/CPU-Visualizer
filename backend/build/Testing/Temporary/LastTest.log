@@ -1,10 +1,10 @@
-Start testing: Dec 30 17:50 Mountain Standard Time
+Start testing: Jan 06 19:32 Mountain Standard Time
 ----------------------------------------------------------
-1/11 Testing: GatesTest.AndGateTest
-1/11 Test: GatesTest.AndGateTest
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=GatesTest.AndGateTest" "--gtest_also_run_disabled_tests"
+1/21 Testing: GatesTest.AndGateTest
+1/21 Test: GatesTest.AndGateTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=GatesTest.AndGateTest" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"GatesTest.AndGateTest" start time: Dec 30 17:50 Mountain Standard Time
+"GatesTest.AndGateTest" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -23,15 +23,15 @@ Note: Google Test filter = GatesTest.AndGateTest
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GatesTest.AndGateTest" end time: Dec 30 17:50 Mountain Standard Time
+"GatesTest.AndGateTest" end time: Jan 06 19:32 Mountain Standard Time
 "GatesTest.AndGateTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/11 Testing: GatesTest.OrGateTest
-2/11 Test: GatesTest.OrGateTest
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=GatesTest.OrGateTest" "--gtest_also_run_disabled_tests"
+2/21 Testing: GatesTest.OrGateTest
+2/21 Test: GatesTest.OrGateTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=GatesTest.OrGateTest" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"GatesTest.OrGateTest" start time: Dec 30 17:50 Mountain Standard Time
+"GatesTest.OrGateTest" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -50,15 +50,15 @@ Note: Google Test filter = GatesTest.OrGateTest
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GatesTest.OrGateTest" end time: Dec 30 17:50 Mountain Standard Time
+"GatesTest.OrGateTest" end time: Jan 06 19:32 Mountain Standard Time
 "GatesTest.OrGateTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/11 Testing: GatesTest.XorGateTest
-3/11 Test: GatesTest.XorGateTest
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=GatesTest.XorGateTest" "--gtest_also_run_disabled_tests"
+3/21 Testing: GatesTest.XorGateTest
+3/21 Test: GatesTest.XorGateTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=GatesTest.XorGateTest" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"GatesTest.XorGateTest" start time: Dec 30 17:50 Mountain Standard Time
+"GatesTest.XorGateTest" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -77,15 +77,15 @@ Note: Google Test filter = GatesTest.XorGateTest
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GatesTest.XorGateTest" end time: Dec 30 17:50 Mountain Standard Time
+"GatesTest.XorGateTest" end time: Jan 06 19:32 Mountain Standard Time
 "GatesTest.XorGateTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/11 Testing: GatesTest.NotGateTest
-4/11 Test: GatesTest.NotGateTest
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=GatesTest.NotGateTest" "--gtest_also_run_disabled_tests"
+4/21 Testing: GatesTest.NotGateTest
+4/21 Test: GatesTest.NotGateTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=GatesTest.NotGateTest" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"GatesTest.NotGateTest" start time: Dec 30 17:50 Mountain Standard Time
+"GatesTest.NotGateTest" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -104,15 +104,15 @@ Note: Google Test filter = GatesTest.NotGateTest
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"GatesTest.NotGateTest" end time: Dec 30 17:50 Mountain Standard Time
+"GatesTest.NotGateTest" end time: Jan 06 19:32 Mountain Standard Time
 "GatesTest.NotGateTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/11 Testing: WireTest.MaskingWorks
-5/11 Test: WireTest.MaskingWorks
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=WireTest.MaskingWorks" "--gtest_also_run_disabled_tests"
+5/21 Testing: WireTest.MaskingWorks
+5/21 Test: WireTest.MaskingWorks
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=WireTest.MaskingWorks" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"WireTest.MaskingWorks" start time: Dec 30 17:50 Mountain Standard Time
+"WireTest.MaskingWorks" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -131,15 +131,15 @@ Note: Google Test filter = WireTest.MaskingWorks
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"WireTest.MaskingWorks" end time: Dec 30 17:50 Mountain Standard Time
+"WireTest.MaskingWorks" end time: Jan 06 19:32 Mountain Standard Time
 "WireTest.MaskingWorks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/11 Testing: WireTest.GetBit
-6/11 Test: WireTest.GetBit
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=WireTest.GetBit" "--gtest_also_run_disabled_tests"
+6/21 Testing: WireTest.GetBit
+6/21 Test: WireTest.GetBit
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=WireTest.GetBit" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"WireTest.GetBit" start time: Dec 30 17:50 Mountain Standard Time
+"WireTest.GetBit" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -158,15 +158,15 @@ Note: Google Test filter = WireTest.GetBit
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"WireTest.GetBit" end time: Dec 30 17:50 Mountain Standard Time
+"WireTest.GetBit" end time: Jan 06 19:32 Mountain Standard Time
 "WireTest.GetBit" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/11 Testing: FullAdderTest.AdditionTest
-7/11 Test: FullAdderTest.AdditionTest
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=FullAdderTest.AdditionTest" "--gtest_also_run_disabled_tests"
+7/21 Testing: FullAdderTest.AdditionTest
+7/21 Test: FullAdderTest.AdditionTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=FullAdderTest.AdditionTest" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"FullAdderTest.AdditionTest" start time: Dec 30 17:50 Mountain Standard Time
+"FullAdderTest.AdditionTest" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -185,15 +185,15 @@ Note: Google Test filter = FullAdderTest.AdditionTest
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"FullAdderTest.AdditionTest" end time: Dec 30 17:50 Mountain Standard Time
+"FullAdderTest.AdditionTest" end time: Jan 06 19:32 Mountain Standard Time
 "FullAdderTest.AdditionTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/11 Testing: AdderTest.AdderAdditionTest
-8/11 Test: AdderTest.AdderAdditionTest
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=AdderTest.AdderAdditionTest" "--gtest_also_run_disabled_tests"
+8/21 Testing: AdderTest.AdderAdditionTest
+8/21 Test: AdderTest.AdderAdditionTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=AdderTest.AdderAdditionTest" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"AdderTest.AdderAdditionTest" start time: Dec 30 17:50 Mountain Standard Time
+"AdderTest.AdderAdditionTest" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -212,15 +212,15 @@ Note: Google Test filter = AdderTest.AdderAdditionTest
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"AdderTest.AdderAdditionTest" end time: Dec 30 17:50 Mountain Standard Time
+"AdderTest.AdderAdditionTest" end time: Jan 06 19:32 Mountain Standard Time
 "AdderTest.AdderAdditionTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-9/11 Testing: ShifterTest.LeftShiftTest
-9/11 Test: ShifterTest.LeftShiftTest
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=ShifterTest.LeftShiftTest" "--gtest_also_run_disabled_tests"
+9/21 Testing: ShifterTest.LeftShiftTest
+9/21 Test: ShifterTest.LeftShiftTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=ShifterTest.LeftShiftTest" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"ShifterTest.LeftShiftTest" start time: Dec 30 17:50 Mountain Standard Time
+"ShifterTest.LeftShiftTest" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -239,15 +239,15 @@ Note: Google Test filter = ShifterTest.LeftShiftTest
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"ShifterTest.LeftShiftTest" end time: Dec 30 17:50 Mountain Standard Time
+"ShifterTest.LeftShiftTest" end time: Jan 06 19:32 Mountain Standard Time
 "ShifterTest.LeftShiftTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-10/11 Testing: ShifterTest.RightShiftTest
-10/11 Test: ShifterTest.RightShiftTest
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=ShifterTest.RightShiftTest" "--gtest_also_run_disabled_tests"
+10/21 Testing: ShifterTest.RightShiftTest
+10/21 Test: ShifterTest.RightShiftTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=ShifterTest.RightShiftTest" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"ShifterTest.RightShiftTest" start time: Dec 30 17:50 Mountain Standard Time
+"ShifterTest.RightShiftTest" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -266,15 +266,15 @@ Note: Google Test filter = ShifterTest.RightShiftTest
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"ShifterTest.RightShiftTest" end time: Dec 30 17:50 Mountain Standard Time
+"ShifterTest.RightShiftTest" end time: Jan 06 19:32 Mountain Standard Time
 "ShifterTest.RightShiftTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-11/11 Testing: ShifterTest.EdgeCases
-11/11 Test: ShifterTest.EdgeCases
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Debug/cpu_tests.exe" "--gtest_filter=ShifterTest.EdgeCases" "--gtest_also_run_disabled_tests"
+11/21 Testing: ShifterTest.EdgeCases
+11/21 Test: ShifterTest.EdgeCases
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=ShifterTest.EdgeCases" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"ShifterTest.EdgeCases" start time: Dec 30 17:50 Mountain Standard Time
+"ShifterTest.EdgeCases" start time: Jan 06 19:32 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
@@ -293,8 +293,278 @@ Note: Google Test filter = ShifterTest.EdgeCases
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"ShifterTest.EdgeCases" end time: Dec 30 17:50 Mountain Standard Time
+"ShifterTest.EdgeCases" end time: Jan 06 19:32 Mountain Standard Time
 "ShifterTest.EdgeCases" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 30 17:50 Mountain Standard Time
+12/21 Testing: MUXTest.MUX4to1Test
+12/21 Test: MUXTest.MUX4to1Test
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=MUXTest.MUX4to1Test" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
+"MUXTest.MUX4to1Test" start time: Jan 06 19:32 Mountain Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = MUXTest.MUX4to1Test
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MUXTest
+[ RUN      ] MUXTest.MUX4to1Test
+[       OK ] MUXTest.MUX4to1Test (0 ms)
+[----------] 1 test from MUXTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"MUXTest.MUX4to1Test" end time: Jan 06 19:32 Mountain Standard Time
+"MUXTest.MUX4to1Test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/21 Testing: MUXTest.MUX2to1Test
+13/21 Test: MUXTest.MUX2to1Test
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=MUXTest.MUX2to1Test" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
+"MUXTest.MUX2to1Test" start time: Jan 06 19:32 Mountain Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = MUXTest.MUX2to1Test
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MUXTest
+[ RUN      ] MUXTest.MUX2to1Test
+[       OK ] MUXTest.MUX2to1Test (0 ms)
+[----------] 1 test from MUXTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"MUXTest.MUX2to1Test" end time: Jan 06 19:32 Mountain Standard Time
+"MUXTest.MUX2to1Test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/21 Testing: LUTest.LogicOperationsTest
+14/21 Test: LUTest.LogicOperationsTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=LUTest.LogicOperationsTest" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
+"LUTest.LogicOperationsTest" start time: Jan 06 19:32 Mountain Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = LUTest.LogicOperationsTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LUTest
+[ RUN      ] LUTest.LogicOperationsTest
+[       OK ] LUTest.LogicOperationsTest (0 ms)
+[----------] 1 test from LUTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"LUTest.LogicOperationsTest" end time: Jan 06 19:32 Mountain Standard Time
+"LUTest.LogicOperationsTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/21 Testing: SignExtenderTest.PositiveExtension
+15/21 Test: SignExtenderTest.PositiveExtension
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=SignExtenderTest.PositiveExtension" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
+"SignExtenderTest.PositiveExtension" start time: Jan 06 19:32 Mountain Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = SignExtenderTest.PositiveExtension
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SignExtenderTest
+[ RUN      ] SignExtenderTest.PositiveExtension
+[       OK ] SignExtenderTest.PositiveExtension (0 ms)
+[----------] 1 test from SignExtenderTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"SignExtenderTest.PositiveExtension" end time: Jan 06 19:32 Mountain Standard Time
+"SignExtenderTest.PositiveExtension" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/21 Testing: SignExtenderTest.NegativeExtension
+16/21 Test: SignExtenderTest.NegativeExtension
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=SignExtenderTest.NegativeExtension" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
+"SignExtenderTest.NegativeExtension" start time: Jan 06 19:32 Mountain Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = SignExtenderTest.NegativeExtension
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SignExtenderTest
+[ RUN      ] SignExtenderTest.NegativeExtension
+[       OK ] SignExtenderTest.NegativeExtension (0 ms)
+[----------] 1 test from SignExtenderTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"SignExtenderTest.NegativeExtension" end time: Jan 06 19:32 Mountain Standard Time
+"SignExtenderTest.NegativeExtension" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/21 Testing: SignExtenderTest.DifferentSizes
+17/21 Test: SignExtenderTest.DifferentSizes
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=SignExtenderTest.DifferentSizes" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
+"SignExtenderTest.DifferentSizes" start time: Jan 06 19:32 Mountain Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = SignExtenderTest.DifferentSizes
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SignExtenderTest
+[ RUN      ] SignExtenderTest.DifferentSizes
+[       OK ] SignExtenderTest.DifferentSizes (0 ms)
+[----------] 1 test from SignExtenderTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"SignExtenderTest.DifferentSizes" end time: Jan 06 19:32 Mountain Standard Time
+"SignExtenderTest.DifferentSizes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/21 Testing: ALUTest.ALUShifterTest
+18/21 Test: ALUTest.ALUShifterTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=ALUTest.ALUShifterTest" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
+"ALUTest.ALUShifterTest" start time: Jan 06 19:32 Mountain Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = ALUTest.ALUShifterTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ALUTest
+[ RUN      ] ALUTest.ALUShifterTest
+[       OK ] ALUTest.ALUShifterTest (0 ms)
+[----------] 1 test from ALUTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"ALUTest.ALUShifterTest" end time: Jan 06 19:32 Mountain Standard Time
+"ALUTest.ALUShifterTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/21 Testing: ALUTest.ALUSetLessThanTest
+19/21 Test: ALUTest.ALUSetLessThanTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=ALUTest.ALUSetLessThanTest" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
+"ALUTest.ALUSetLessThanTest" start time: Jan 06 19:32 Mountain Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = ALUTest.ALUSetLessThanTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ALUTest
+[ RUN      ] ALUTest.ALUSetLessThanTest
+[       OK ] ALUTest.ALUSetLessThanTest (0 ms)
+[----------] 1 test from ALUTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"ALUTest.ALUSetLessThanTest" end time: Jan 06 19:32 Mountain Standard Time
+"ALUTest.ALUSetLessThanTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/21 Testing: ALUTest.ALUAdderTest
+20/21 Test: ALUTest.ALUAdderTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=ALUTest.ALUAdderTest" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
+"ALUTest.ALUAdderTest" start time: Jan 06 19:32 Mountain Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = ALUTest.ALUAdderTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ALUTest
+[ RUN      ] ALUTest.ALUAdderTest
+[       OK ] ALUTest.ALUAdderTest (0 ms)
+[----------] 1 test from ALUTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"ALUTest.ALUAdderTest" end time: Jan 06 19:32 Mountain Standard Time
+"ALUTest.ALUAdderTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/21 Testing: ALUTest.ALULogicTest
+21/21 Test: ALUTest.ALULogicTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=ALUTest.ALULogicTest" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
+"ALUTest.ALULogicTest" start time: Jan 06 19:32 Mountain Standard Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = ALUTest.ALULogicTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ALUTest
+[ RUN      ] ALUTest.ALULogicTest
+[       OK ] ALUTest.ALULogicTest (0 ms)
+[----------] 1 test from ALUTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"ALUTest.ALULogicTest" end time: Jan 06 19:32 Mountain Standard Time
+"ALUTest.ALULogicTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 06 19:32 Mountain Standard Time

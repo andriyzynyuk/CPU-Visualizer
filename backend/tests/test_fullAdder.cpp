@@ -10,6 +10,7 @@ TEST(FullAdderTest, AdditionTest) {
 
     FullAdder fullAdder(&X, &Y, &C_IN, SUM, C_OUT);
 
+    // 0 + 0
     X.set(0b0);
     Y.set(0b0);
     C_IN.set(0b0);
@@ -18,6 +19,7 @@ TEST(FullAdderTest, AdditionTest) {
     EXPECT_EQ(SUM.getValue(), 0b0);
     EXPECT_EQ(C_OUT.getValue(), 0b0);
 
+    // 1 + 0
     X.set(0b1);
     Y.set(0b0);
     C_IN.set(0b0);
@@ -26,6 +28,7 @@ TEST(FullAdderTest, AdditionTest) {
     EXPECT_EQ(SUM.getValue(), 0b1);
     EXPECT_EQ(C_OUT.getValue(), 0b0);
 
+    // 0 + 1
     X.set(0b0);
     Y.set(0b1);
     C_IN.set(0b0);
@@ -34,6 +37,7 @@ TEST(FullAdderTest, AdditionTest) {
     EXPECT_EQ(SUM.getValue(), 0b1);
     EXPECT_EQ(C_OUT.getValue(), 0b0);
 
+    // 0 + 0 + 1
     X.set(0b0);
     Y.set(0b0);
     C_IN.set(0b1);
@@ -42,6 +46,7 @@ TEST(FullAdderTest, AdditionTest) {
     EXPECT_EQ(SUM.getValue(), 0b1);
     EXPECT_EQ(C_OUT.getValue(), 0b0);
 
+    // 1 + 0 + 1
     X.set(0b1);
     Y.set(0b0);
     C_IN.set(0b1);
@@ -50,6 +55,7 @@ TEST(FullAdderTest, AdditionTest) {
     EXPECT_EQ(SUM.getValue(), 0b0);
     EXPECT_EQ(C_OUT.getValue(), 0b1);
 
+    // 1 + 1 + 1
     X.set(0b1);
     Y.set(0b1);
     C_IN.set(0b1);
@@ -58,6 +64,7 @@ TEST(FullAdderTest, AdditionTest) {
     EXPECT_EQ(SUM.getValue(), 0b1);
     EXPECT_EQ(C_OUT.getValue(), 0b1);
 
+    // 0 + 0 + 1
     X.set(0b0);
     Y.set(0b0);
     C_IN.set(0b1);

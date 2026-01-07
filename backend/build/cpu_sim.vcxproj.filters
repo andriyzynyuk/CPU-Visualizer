@@ -13,6 +13,18 @@
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\Shifter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\MUX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\LU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\SignExtender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\ALU.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\CMakeLists.txt" />

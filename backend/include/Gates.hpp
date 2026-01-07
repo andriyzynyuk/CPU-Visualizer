@@ -28,6 +28,14 @@ struct XorGate : Component {
     void eval() override;
 };
 
+struct NorGate : Component {
+    std::vector<Wire*> inputs;
+    Wire& output;
+
+    NorGate(const std::vector<Wire*>& in, Wire& out);
+    void eval() override;
+};
+
 struct NotGate : Component {
     Wire* input;
     Wire& output;

@@ -13,7 +13,6 @@ TEST(AdderTest, AdderAdditionTest) {
     X.set(100);
     Y.set(100);
     C_IN.set(0);
-
     adder.eval();
 
     EXPECT_EQ(SUM.getValue(), 200);

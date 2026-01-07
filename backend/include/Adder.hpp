@@ -12,7 +12,10 @@ struct Adder : Component {
     Wire *cin;
 
     // Internal wires
-    std::vector<Wire> X_bits, Y_bits, sum_bits, carries;
+    std::vector<Wire> X_bits;
+    std::vector<Wire> Y_bits;
+    std::vector<Wire> sum_bits;
+    std::vector<Wire> carries;
 
     // Output
     Wire &sum;

@@ -15,6 +15,10 @@ add_executable(cpu_tests
     test_fullAdder.cpp
     test_adder.cpp
     test_shifter.cpp
+    test_mux.cpp
+    test_lu.cpp
+    test_signextender.cpp
+    test_alu.cpp
 )
 
 target_link_libraries(cpu_tests
