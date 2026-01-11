@@ -7,10 +7,13 @@ import ShifterView from "./views/ShifterView.jsx"
 import LogicUnitView from "./views/LogicUnitView.jsx"
 import MUX2to1View from "./views/MUX2to1View.jsx"
 import MUX4to1View from "./views/MUX4to1View.jsx"
+import CPUView from "./views/CPUView.jsx"
+import NextAddrView from "./views/NextAddrView.jsx"
+import BranchCondCheckView from "./views/BranchCondCheckView.jsx"
 
 export default function App() {
   const [stack, setStack] = useState([
-    { view: "ALU", params: null}
+    { view: "CPU", params: null}
   ]);
 
   const current = stack[stack.length - 1];
@@ -25,8 +28,29 @@ export default function App() {
 
   return (
     <div className="app-root">
+      {current.view === "CPU" && (
+        <CPUView onNavigate={navigate} />
+      )}
+
+      {current.view === "NextAddr" && (
+        <NextAddrView
+          onNavigate={navigate}
+          onBack={goBack}
+        />
+      )}
+      
+      {current.view === "BranchCondCheck" && (
+        <BranchCondCheckView
+          onNavigate={navigate}
+          onBack={goBack}
+        />
+      )}
+
       {current.view === "ALU" && (
-        <ALUView onNavigate={navigate} />
+        <ALUView
+          onNavigate={navigate}
+          onBack={goBack}
+        />
       )}
 
       {current.view === "Shifter" && (
