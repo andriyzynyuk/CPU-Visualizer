@@ -19,6 +19,8 @@ add_executable(cpu_tests
     test_lu.cpp
     test_signextender.cpp
     test_alu.cpp
+    test_branchCondCheck.cpp
+    test_nextAddr.cpp
 )
 
 target_link_libraries(cpu_tests

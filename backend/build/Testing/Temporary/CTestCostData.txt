@@ -21,4 +21,6 @@ ALUTest.ALULogicTest 7 0.00282906
 ALUTest.ALUShifterTest 7 0.00270063
 ALUTest.ALUSetLessThanTest 7 0.0027931
 ALUTest.ALUAdderTest 3 0.00696137
+NextAddrTest.JumpTest 0 0
 ---
+NextAddrTest.JumpTest

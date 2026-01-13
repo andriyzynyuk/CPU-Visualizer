@@ -1,5 +1,5 @@
 {
-  "tests": 21,
+  "tests": 30,
   "name": "AllTests",
   "testsuites": [
     {
@@ -158,6 +158,63 @@
           "name": "ALULogicTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_alu.cpp",
           "line": 112
+        }
+      ]
+    },
+    {
+      "name": "BranchCondCheckTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "BEQTrueTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "line": 4
+        },
+        {
+          "name": "BEQFalseTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "line": 20
+        },
+        {
+          "name": "BNETrueTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "line": 36
+        },
+        {
+          "name": "BNEFalseTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "name": "NextAddrTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "IncrPCTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
+          "line": 4
+        },
+        {
+          "name": "BranchTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
+          "line": 32
+        },
+        {
+          "name": "JumpTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
+          "line": 100
+        },
+        {
+          "name": "JumpRegisterTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
+          "line": 128
+        },
+        {
+          "name": "SysCallTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
+          "line": 156
         }
       ]
     }

@@ -433,6 +433,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_lu.cpp" />
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_signextender.cpp" />
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_alu.cpp" />
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_branchCondCheck.cpp" />
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_nextAddr.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

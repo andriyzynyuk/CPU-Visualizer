@@ -16,9 +16,11 @@ add_library(cpu_sim
     src/Adder.cpp
     src/Shifter.cpp
     src/MUX.cpp
-    src/LU.cpp
+    src/LogicUnit.cpp
     src/SignExtender.cpp
     src/ALU.cpp
+    src/BranchCondCheck.cpp
+    src/NextAddr.cpp
 )
 
 target_include_directories(cpu_sim PUBLIC include)

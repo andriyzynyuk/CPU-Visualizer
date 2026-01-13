@@ -6,7 +6,7 @@ SignExtender::SignExtender(Wire* in, Wire& out)
 void SignExtender::eval() {
     bool signBit = input->getBit(input->width - 1);
     uint32_t result = 0;
-    for (int i = 0; i < 32; ++i) {
+    for (int i = 0; i < output.width; ++i) {
         if (i < input->width) {
             if (input->getBit(i)) result |= (1u << i);
         } else {
