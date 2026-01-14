@@ -4,6 +4,7 @@
 #include "Wire.hpp"
 #include "Gates.hpp"
 #include "Adder.hpp"
+#include "MUX.hpp"
 
 struct BranchCondCheck : Component {
     // Inputs
@@ -12,12 +13,18 @@ struct BranchCondCheck : Component {
     Wire *BrType;
 
     // Internal wires
+    Wire rsMSB;
     Wire rsNot;
-    Wire adderResult;
     Wire cin;
     Wire cout;
+    Wire adderResult;
     Wire ORAdderResult;
-    Wire xorWire;
+    Wire beq;
+    Wire const0;
+    Wire BrTypeMSB;
+    Wire bltz;
+    Wire s0;
+    Wire s1;
 
     // Output
     Wire &BrTrue;
@@ -25,8 +32,9 @@ struct BranchCondCheck : Component {
     // Gates
     NotGate reverseRs;
     Adder adder;
-    XorGate xorGate;
     NotGate notGate;
+    AndGate andGate;
+    MUX4to1 mux;
 
     BranchCondCheck(Wire* RT, Wire* RS, Wire* BRType, Wire& BRTrue);
     void eval() override;

@@ -7,7 +7,7 @@ TEST(NextAddrTest, IncrPCTest) {
     Wire pc(30);
     Wire jta(26);
     Wire sysCallAddr(30);
-    Wire BrType(1);
+    Wire BrType(2);
     Wire PCSrc(2);
     
     Wire incrPC(30);
@@ -35,7 +35,7 @@ TEST(NextAddrTest, BranchTest) {
     Wire pc(30);
     Wire jta(26);
     Wire sysCallAddr(30);
-    Wire BrType(1);
+    Wire BrType(2);
     Wire PCSrc(2);
     
     Wire incrPC(30);
@@ -50,7 +50,7 @@ TEST(NextAddrTest, BranchTest) {
     pc.set(10);
     jta.set(5);
     sysCallAddr.set(0);
-    BrType.set(0);
+    BrType.set(1);
     PCSrc.set(0);
 
     nextAddr.eval();
@@ -63,7 +63,7 @@ TEST(NextAddrTest, BranchTest) {
     pc.set(10);
     jta.set(5);
     sysCallAddr.set(0);
-    BrType.set(0);
+    BrType.set(1);
     PCSrc.set(0);
 
     nextAddr.eval();
@@ -76,7 +76,7 @@ TEST(NextAddrTest, BranchTest) {
     pc.set(10);
     jta.set(5);
     sysCallAddr.set(0);
-    BrType.set(1);
+    BrType.set(2);
     PCSrc.set(0);
 
     nextAddr.eval();
@@ -89,7 +89,7 @@ TEST(NextAddrTest, BranchTest) {
     pc.set(10);
     jta.set(5);
     sysCallAddr.set(0);
-    BrType.set(1);
+    BrType.set(2);
     PCSrc.set(0);
 
     nextAddr.eval();
@@ -103,7 +103,7 @@ TEST(NextAddrTest, JumpTest) {
     Wire pc(30);
     Wire jta(26);
     Wire sysCallAddr(30);
-    Wire BrType(1);
+    Wire BrType(2);
     Wire PCSrc(2);
     
     Wire incrPC(30);
@@ -121,7 +121,7 @@ TEST(NextAddrTest, JumpTest) {
     PCSrc.set(1);
 
     nextAddr.eval();
-    //EXPECT_EQ(incrPC.getValue(), 2);
+    EXPECT_EQ(incrPC.getValue(), 0b110011111111111111111111111111+1);
     EXPECT_EQ(nextPC.getValue(), 0b110010101010101010101010101010);
 }
 
@@ -131,7 +131,7 @@ TEST(NextAddrTest, JumpRegisterTest) {
     Wire pc(30);
     Wire jta(26);
     Wire sysCallAddr(30);
-    Wire BrType(1);
+    Wire BrType(2);
     Wire PCSrc(2);
     
     Wire incrPC(30);

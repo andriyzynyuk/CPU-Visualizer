@@ -22,5 +22,5 @@ ALUTest.ALUShifterTest 7 0.00270063
 ALUTest.ALUSetLessThanTest 7 0.0027931
 ALUTest.ALUAdderTest 3 0.00696137
 NextAddrTest.JumpTest 0 0
+RegFileTest.SetRegTest 1 0.0182018
 ---
-NextAddrTest.JumpTest

@@ -21,6 +21,7 @@ add_library(cpu_sim
     src/ALU.cpp
     src/BranchCondCheck.cpp
     src/NextAddr.cpp
+    src/RegFile.cpp
 )
 
 target_include_directories(cpu_sim PUBLIC include)

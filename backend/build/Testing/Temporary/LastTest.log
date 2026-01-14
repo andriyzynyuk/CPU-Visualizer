@@ -1,39 +1,30 @@
-Start testing: Jan 12 19:36 Mountain Standard Time
+Start testing: Jan 13 15:42 Mountain Standard Time
 ----------------------------------------------------------
-28/30 Testing: NextAddrTest.JumpTest
-28/30 Test: NextAddrTest.JumpTest
-Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=NextAddrTest.JumpTest" "--gtest_also_run_disabled_tests"
+31/31 Testing: RegFileTest.SetRegTest
+31/31 Test: RegFileTest.SetRegTest
+Command: "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/Release/cpu_tests.exe" "--gtest_filter=RegFileTest.SetRegTest" "--gtest_also_run_disabled_tests"
 Directory: C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests
-"NextAddrTest.JumpTest" start time: Jan 12 19:36 Mountain Standard Time
+"RegFileTest.SetRegTest" start time: Jan 13 15:42 Mountain Standard Time
 Output:
 ----------------------------------------------------------
 Running main() from C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest_main.cc
-Note: Google Test filter = NextAddrTest.JumpTest
+Note: Google Test filter = RegFileTest.SetRegTest
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 1 test from NextAddrTest
-[ RUN      ] NextAddrTest.JumpTest
-C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_nextAddr.cpp(124): error: Expected equality of these values:
-  incrPC.getValue()
-    Which is: 872415232
-  2
-
-[  FAILED  ] NextAddrTest.JumpTest (0 ms)
-[----------] 1 test from NextAddrTest (0 ms total)
+[----------] 1 test from RegFileTest
+[ RUN      ] RegFileTest.SetRegTest
+[       OK ] RegFileTest.SetRegTest (0 ms)
+[----------] 1 test from RegFileTest (0 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (0 ms total)
-[  PASSED  ] 0 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] NextAddrTest.JumpTest
-
- 1 FAILED TEST
+[  PASSED  ] 1 test.
 <end of output>
-Test time =   1.63 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
-Test Failed.
-"NextAddrTest.JumpTest" end time: Jan 12 19:36 Mountain Standard Time
-"NextAddrTest.JumpTest" time elapsed: 00:00:01
+Test Passed.
+"RegFileTest.SetRegTest" end time: Jan 13 15:42 Mountain Standard Time
+"RegFileTest.SetRegTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jan 12 19:36 Mountain Standard Time
+End testing: Jan 13 15:42 Mountain Standard Time

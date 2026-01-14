@@ -1,5 +1,5 @@
 {
-  "tests": 30,
+  "tests": 34,
   "name": "AllTests",
   "testsuites": [
     {
@@ -163,27 +163,42 @@
     },
     {
       "name": "BranchCondCheckTest",
-      "tests": 4,
+      "tests": 7,
       "testsuite": [
         {
-          "name": "BEQTrueTest",
+          "name": "BranchingDisabledTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
           "line": 4
         },
         {
+          "name": "BEQTrueTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "line": 26
+        },
+        {
           "name": "BEQFalseTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
-          "line": 20
+          "line": 42
         },
         {
           "name": "BNETrueTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
-          "line": 36
+          "line": 58
         },
         {
           "name": "BNEFalseTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
-          "line": 52
+          "line": 74
+        },
+        {
+          "name": "BLTZTrueTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "line": 90
+        },
+        {
+          "name": "BLTZFalseTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "line": 106
         }
       ]
     },
@@ -215,6 +230,17 @@
           "name": "SysCallTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
           "line": 156
+        }
+      ]
+    },
+    {
+      "name": "RegFileTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "SetRegTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_regFile.cpp",
+          "line": 4
         }
       ]
     }
