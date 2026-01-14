@@ -23,4 +23,10 @@ ALUTest.ALUSetLessThanTest 7 0.0027931
 ALUTest.ALUAdderTest 3 0.00696137
 NextAddrTest.JumpTest 0 0
 RegFileTest.SetRegTest 1 0.0182018
+InstructionTest.GetSetBits 1 0.0197877
+InstructionTest.RType 1 0.0208123
+InstructionTest.IType 1 0.0193343
+InstructionTest.JType 1 0.0200892
+InstructionTest.ADD 1 0.020219
+InstrCacheTest.FetchInstruction 1 0.0188442
 ---

@@ -22,6 +22,8 @@ add_executable(cpu_tests
     test_branchCondCheck.cpp
     test_nextAddr.cpp
     test_regFile.cpp
+    test_instruction.cpp
+    test_instrCache.cpp
 )
 
 target_link_libraries(cpu_tests

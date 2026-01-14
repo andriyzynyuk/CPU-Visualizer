@@ -1,5 +1,5 @@
 {
-  "tests": 34,
+  "tests": 40,
   "name": "AllTests",
   "testsuites": [
     {
@@ -240,6 +240,48 @@
         {
           "name": "SetRegTest",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_regFile.cpp",
+          "line": 4
+        }
+      ]
+    },
+    {
+      "name": "InstructionTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "GetSetBits",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instruction.cpp",
+          "line": 4
+        },
+        {
+          "name": "RType",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instruction.cpp",
+          "line": 15
+        },
+        {
+          "name": "IType",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instruction.cpp",
+          "line": 26
+        },
+        {
+          "name": "JType",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instruction.cpp",
+          "line": 35
+        },
+        {
+          "name": "ADD",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instruction.cpp",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "name": "InstrCacheTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "GetInstruction",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instrCache.cpp",
           "line": 4
         }
       ]

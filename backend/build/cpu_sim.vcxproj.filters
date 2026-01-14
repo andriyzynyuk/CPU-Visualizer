@@ -34,6 +34,12 @@
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\RegFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\Instruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\InstrCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\CMakeLists.txt" />
