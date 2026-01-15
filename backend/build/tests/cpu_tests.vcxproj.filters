@@ -43,6 +43,9 @@
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_instrCache.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_controlUnit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\CMakeLists.txt" />

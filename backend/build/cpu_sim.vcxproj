@@ -317,6 +317,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\RegFile.cpp" />
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\Instruction.cpp" />
     <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\InstrCache.cpp" />
+    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\src\ControlUnit.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -1,5 +1,5 @@
 {
-  "tests": 40,
+  "tests": 48,
   "name": "AllTests",
   "testsuites": [
     {
@@ -283,6 +283,52 @@
           "name": "GetInstruction",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instrCache.cpp",
           "line": 4
+        }
+      ]
+    },
+    {
+      "name": "ControlUnitTest",
+      "tests": 8,
+      "testsuite": [
+        {
+          "name": "ADDIInstruction",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "line": 7
+        },
+        {
+          "name": "SLTIInstruction",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "line": 42
+        },
+        {
+          "name": "ANDIInstruction",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "line": 77
+        },
+        {
+          "name": "ORIInstruction",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "line": 112
+        },
+        {
+          "name": "JUMPInstruction",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "line": 143
+        },
+        {
+          "name": "BEQInstruction",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "line": 172
+        },
+        {
+          "name": "ADDInstruction",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "line": 202
+        },
+        {
+          "name": "SUBInstruction",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "line": 233
         }
       ]
     }

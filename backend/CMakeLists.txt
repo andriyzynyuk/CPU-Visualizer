@@ -24,6 +24,7 @@ add_library(cpu_sim
     src/RegFile.cpp
     src/Instruction.cpp
     src/InstrCache.cpp
+    src/ControlUnit.cpp
 )
 
 target_include_directories(cpu_sim PUBLIC include)
