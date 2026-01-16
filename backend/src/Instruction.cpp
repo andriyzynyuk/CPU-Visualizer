@@ -51,5 +51,77 @@ Instruction Instruction::J(uint8_t op, uint32_t jta) {
 }
 
 Instruction Instruction::ADD(uint8_t rd, uint8_t rs, uint8_t rt) {
-    return R(0b000000, rs, rt, rd, 0, 0b100000);
+    return R(0, rs, rt, rd, 0, 0b100000);
 }
+
+Instruction Instruction::SUB(uint8_t rd, uint8_t rs, uint8_t rt) {
+    return R(0, rs, rt, rd, 0, 0b100010);
+}
+
+Instruction Instruction::SLT(uint8_t rd, uint8_t rs, uint8_t rt) {
+    return R(0, rs, rt, rd, 0, 0b101010);
+}
+
+Instruction Instruction::ADDI(uint8_t rt, uint8_t rs, uint16_t imm) {
+    return I(0b001000, rs, rt, imm);
+}
+
+Instruction Instruction::SLTI(uint8_t rt, uint8_t rs, uint16_t imm) {
+    return I(0b001010, rs, rt, imm);
+}
+
+Instruction Instruction::AND(uint8_t rd, uint8_t rs, uint8_t rt) {
+    return R(0, rs, rt, rd, 0, 0b100100);
+}
+
+Instruction Instruction::OR(uint8_t rd, uint8_t rs, uint8_t rt) {
+    return R(0, rs, rt, rd, 0, 0b100101);
+}
+
+Instruction Instruction::XOR(uint8_t rd, uint8_t rs, uint8_t rt) {
+    return R(0, rs, rt, rd, 0, 0b100110);
+}
+
+Instruction Instruction::NOR(uint8_t rd, uint8_t rs, uint8_t rt) {
+    return R(0, rs, rt, rd, 0, 0b100111);
+}
+
+Instruction Instruction::ANDI(uint8_t rt, uint8_t rs, uint16_t imm) {
+    return I(0b001100, rs, rt, imm);
+}
+
+Instruction Instruction::ORI(uint8_t rt, uint8_t rs, uint16_t imm) {
+    return I(0b001101, rs, rt, imm);
+}
+
+Instruction Instruction::XORI(uint8_t rt, uint8_t rs, uint16_t imm) {
+    return I(0b001110, rs, rt, imm);
+}
+
+Instruction Instruction::JUMP(uint32_t jta) {
+    return J(0b000010, jta);
+}
+
+Instruction Instruction::JR(uint8_t rs) {
+    return R(0, rs, 0, 0, 0, 0b001000);
+}
+
+Instruction Instruction::BLTZ(uint8_t rs, uint16_t imm) {
+    return I(0b000001, rs, 0, imm);
+}
+
+Instruction Instruction::BEQ(uint8_t rt, uint8_t rs, uint16_t imm) {
+    return I(0b000100, rs, rt, imm);
+}
+
+Instruction Instruction::BNE(uint8_t rt, uint8_t rs, uint16_t imm) {
+    return I(0b000101, rs, rt, imm);
+}
+
+Instruction Instruction::JAL(uint32_t jta) {
+    return J(0b000011, jta);
+}
+
+// Instruction Instruction::SYSCALL() {
+//     return R(0, 0, 0, 0, 0, 0b001100);
+// }

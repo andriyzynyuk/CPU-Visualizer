@@ -25,6 +25,8 @@ add_executable(cpu_tests
     test_instruction.cpp
     test_instrCache.cpp
     test_controlUnit.cpp
+    test_pc.cpp
+    test_cpu.cpp
 )
 
 target_link_libraries(cpu_tests

@@ -14,3 +14,7 @@ void InstrCache::eval(){
 void InstrCache::setInstructions(std::vector<Instruction> Instructions) {
     instructions = Instructions;
 }
+
+Instruction InstrCache::getCurrentInstruction() {
+    return instructions[pc->getValue()];
+}

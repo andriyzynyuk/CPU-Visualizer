@@ -177,6 +177,7 @@ void ControlUnit::eval(){
                 dataWrite.set(0b0);
                 BrType.set(0b00);
                 PCSrc.set(0b00);
+                break;
             //AND
             case 0b100100:
                 regWrite.set(0b1);

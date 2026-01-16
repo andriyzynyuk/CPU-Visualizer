@@ -1,5 +1,5 @@
 {
-  "tests": 48,
+  "tests": 53,
   "name": "AllTests",
   "testsuites": [
     {
@@ -329,6 +329,43 @@
           "name": "SUBInstruction",
           "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
           "line": 233
+        }
+      ]
+    },
+    {
+      "name": "PCTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "PCInitialization",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_pc.cpp",
+          "line": 4
+        },
+        {
+          "name": "PCEval",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_pc.cpp",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "name": "CPUTEST",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "SingleInstructionTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_cpu.cpp",
+          "line": 4
+        },
+        {
+          "name": "ArithmeticInstructionTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_cpu.cpp",
+          "line": 15
+        },
+        {
+          "name": "LogicalInstructionTest",
+          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_cpu.cpp",
+          "line": 35
         }
       ]
     }

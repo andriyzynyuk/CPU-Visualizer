@@ -22,4 +22,5 @@ struct InstrCache : Component {
     InstrCache(Wire* pc, Wire& instr);
     void eval() override;
     void setInstructions(std::vector<Instruction> Instructions);
+    Instruction getCurrentInstruction();
 };
