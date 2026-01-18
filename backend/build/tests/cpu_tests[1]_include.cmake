@@ -1,5 +1,0 @@
-if(EXISTS "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/tests/cpu_tests[1]_tests.cmake")
-  include("C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/tests/cpu_tests[1]_tests.cmake")
-else()
-  add_test(cpu_tests_NOT_BUILT cpu_tests_NOT_BUILT)
-endif()
