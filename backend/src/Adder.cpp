@@ -34,3 +34,66 @@ void Adder::eval() {
     }
     cout.set(carries[32].getValue() & 1);
 }
+
+uint32_t Adder::getWireByPath(const std::string& path) {
+    if (path.rfind("fullAdders[", 0) == 0) {
+        size_t endBracket = path.find(']');
+        if (endBracket == std::string::npos) return -1;
+        
+        int index = std::stoi(path.substr(11, endBracket - 11));
+        if (index < 0 || index >= 32) return -1;
+        
+        // Check if there's a sub-path after "]."
+        if (path.length() > endBracket + 1 && path[endBracket + 1] == '.') {
+            std::string subPath = path.substr(endBracket + 2);
+            return fullAdders[index]->getWireByPath(subPath);
+        }
+        
+        return -1;
+    }
+
+    if (path.rfind("X_bits[", 0) == 0) {
+        size_t endBracket = path.find(']');
+        if (endBracket == std::string::npos) return -1;
+        
+        int index = std::stoi(path.substr(7, endBracket - 7));
+        if (index < 0 || index >= 32) return -1;
+        
+        return X_bits[index].getValue();
+    }
+
+    if (path.rfind("Y_bits[", 0) == 0) {
+        size_t endBracket = path.find(']');
+        if (endBracket == std::string::npos) return -1;
+        
+        int index = std::stoi(path.substr(7, endBracket - 7));
+        if (index < 0 || index >= 32) return -1;
+        
+        return Y_bits[index].getValue();
+    }
+
+    if (path.rfind("sum_bits[", 0) == 0) {
+        size_t endBracket = path.find(']');
+        if (endBracket == std::string::npos) return -1;
+        
+        int index = std::stoi(path.substr(9, endBracket - 9));
+        if (index < 0 || index >= 32) return -1;
+        
+        return sum_bits[index].getValue();
+    }
+
+    if (path.rfind("carries[", 0) == 0) {
+        size_t endBracket = path.find(']');
+        if (endBracket == std::string::npos) return -1;
+        
+        int index = std::stoi(path.substr(8, endBracket - 8));
+        if (index < 0 || index >= (int)carries.size()) return -1;
+        
+        return carries[index].getValue();
+    }
+
+    if (path == "cin") return cin->getValue();
+    if (path == "cout") return cout.getValue();
+
+    return -1; // Wire not found
+}

@@ -48,6 +48,7 @@ struct MUX4to1 : Component {
     MUX4to1(Wire* IN0, Wire* IN1, Wire* IN2, Wire* IN3,
             Wire* S1, Wire* S0, Wire& OUT);
     void eval() override;
+    uint32_t getWireByPath(const std::string& path);
 };
 
 struct MUX2to1 : Component {
@@ -80,4 +81,5 @@ struct MUX2to1 : Component {
     MUX2to1(Wire* IN0, Wire* IN1,
             Wire* S0, Wire& OUT);
     void eval() override;
+    uint32_t getWireByPath(const std::string& path);
 };

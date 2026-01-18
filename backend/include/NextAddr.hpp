@@ -49,4 +49,5 @@ struct NextAddr : Component {
                     Wire* BRType, Wire* PCSRC,
                     Wire& INCRPC, Wire& NEXTPC);
     void eval() override;
+    uint32_t getWireByPath(const std::string& path);
 };

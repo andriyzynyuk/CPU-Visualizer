@@ -24,4 +24,5 @@ struct RegFile : Component {
     RegFile(Wire* RS, Wire* RT, Wire* WriteData, Wire* RegIn, Wire* RegWrite,
                     Wire& RS_out, Wire& RT_OUT);
     void eval() override;
+    uint32_t getWireByPath(const std::string& path);
 };

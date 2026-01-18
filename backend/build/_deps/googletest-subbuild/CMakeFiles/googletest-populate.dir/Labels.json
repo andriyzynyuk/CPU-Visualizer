@@ -2,37 +2,37 @@
 	"sources" : 
 	[
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
 		},
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/81df20e0df0c7135a580410375de2021/googletest-populate.rule"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/051b07c0f0304d9dd1914eb6eef2b63a/googletest-populate.rule"
 		},
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/a352e6ece188dfaa983f9884e736dd78/googletest-populate-complete.rule"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/0afd8f2709c5f6857438fe08c80a5750/googletest-populate-complete.rule"
 		},
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/8db611d32e776cd93598c6fbacc3c4f0/googletest-populate-build.rule"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/bbd49c3a085756a3e10f0e8827c37936/googletest-populate-build.rule"
 		},
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/8db611d32e776cd93598c6fbacc3c4f0/googletest-populate-configure.rule"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/bbd49c3a085756a3e10f0e8827c37936/googletest-populate-configure.rule"
 		},
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/8db611d32e776cd93598c6fbacc3c4f0/googletest-populate-download.rule"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/bbd49c3a085756a3e10f0e8827c37936/googletest-populate-download.rule"
 		},
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/8db611d32e776cd93598c6fbacc3c4f0/googletest-populate-install.rule"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/bbd49c3a085756a3e10f0e8827c37936/googletest-populate-install.rule"
 		},
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/8db611d32e776cd93598c6fbacc3c4f0/googletest-populate-mkdir.rule"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/bbd49c3a085756a3e10f0e8827c37936/googletest-populate-mkdir.rule"
 		},
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/8db611d32e776cd93598c6fbacc3c4f0/googletest-populate-patch.rule"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/bbd49c3a085756a3e10f0e8827c37936/googletest-populate-patch.rule"
 		},
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/8db611d32e776cd93598c6fbacc3c4f0/googletest-populate-test.rule"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/bbd49c3a085756a3e10f0e8827c37936/googletest-populate-test.rule"
 		},
 		{
-			"file" : "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/8db611d32e776cd93598c6fbacc3c4f0/googletest-populate-update.rule"
+			"file" : "C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/CMakeFiles/bbd49c3a085756a3e10f0e8827c37936/googletest-populate-update.rule"
 		}
 	],
 	"target" : 

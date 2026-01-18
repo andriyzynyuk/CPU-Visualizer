@@ -38,4 +38,5 @@ struct BranchCondCheck : Component {
 
     BranchCondCheck(Wire* RT, Wire* RS, Wire* BRType, Wire& BRTrue);
     void eval() override;
+    uint32_t getWireByPath(const std::string& path);
 };

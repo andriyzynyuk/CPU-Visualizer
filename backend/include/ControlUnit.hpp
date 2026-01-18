@@ -32,4 +32,5 @@ struct ControlUnit : Component {
                 Wire& AddSub, Wire& LogicFunc, Wire& FuncClass, Wire& DataRead,
                 Wire& DataWrite, Wire& BRType, Wire& PCSRC);
     void eval() override;
+    //uint32_t getWireByPath(const std::string& path);
 };

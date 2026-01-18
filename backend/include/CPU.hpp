@@ -73,4 +73,5 @@ struct CPU {
     //void loadDataCache
     void firstCycle();
     void executeCycle();
+    uint32_t getWireByPath(const std::string& path);
 };

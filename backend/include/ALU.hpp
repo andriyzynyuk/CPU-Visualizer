@@ -49,4 +49,5 @@ struct ALU : Component {
         Wire* ShiftDirection, Wire* LogicFunc, Wire* FuncClass,
         Wire& S, Wire& COUT);
     void eval() override;
+    uint32_t getWireByPath(const std::string& path);
 };

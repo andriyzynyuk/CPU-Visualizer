@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\8db611d32e776cd93598c6fbacc3c4f0\googletest-populate-mkdir.rule">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\bbd49c3a085756a3e10f0e8827c37936\googletest-populate-mkdir.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\8db611d32e776cd93598c6fbacc3c4f0\googletest-populate-download.rule">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\bbd49c3a085756a3e10f0e8827c37936\googletest-populate-download.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\8db611d32e776cd93598c6fbacc3c4f0\googletest-populate-update.rule">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\bbd49c3a085756a3e10f0e8827c37936\googletest-populate-update.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\8db611d32e776cd93598c6fbacc3c4f0\googletest-populate-patch.rule">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\bbd49c3a085756a3e10f0e8827c37936\googletest-populate-patch.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\8db611d32e776cd93598c6fbacc3c4f0\googletest-populate-configure.rule">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\bbd49c3a085756a3e10f0e8827c37936\googletest-populate-configure.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\8db611d32e776cd93598c6fbacc3c4f0\googletest-populate-build.rule">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\bbd49c3a085756a3e10f0e8827c37936\googletest-populate-build.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\8db611d32e776cd93598c6fbacc3c4f0\googletest-populate-install.rule">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\bbd49c3a085756a3e10f0e8827c37936\googletest-populate-install.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\8db611d32e776cd93598c6fbacc3c4f0\googletest-populate-test.rule">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\bbd49c3a085756a3e10f0e8827c37936\googletest-populate-test.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\a352e6ece188dfaa983f9884e736dd78\googletest-populate-complete.rule">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\0afd8f2709c5f6857438fe08c80a5750\googletest-populate-complete.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\81df20e0df0c7135a580410375de2021\googletest-populate.rule">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\051b07c0f0304d9dd1914eb6eef2b63a\googletest-populate.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+    <None Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{5961B3F1-5CC0-3760-9CC3-DAC227D4B8EA}</UniqueIdentifier>
+      <UniqueIdentifier>{81788336-26B2-3356-B015-727608E417FD}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

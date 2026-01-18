@@ -27,6 +27,7 @@ add_executable(cpu_tests
     test_controlUnit.cpp
     test_pc.cpp
     test_cpu.cpp
+    test_getWireByPath.cpp
 )
 
 target_link_libraries(cpu_tests

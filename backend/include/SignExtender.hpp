@@ -8,5 +8,5 @@ struct SignExtender : Component {
     Wire& output;
 
     SignExtender(Wire* in, Wire& out);
-    void eval() override;
+    void eval();
 };

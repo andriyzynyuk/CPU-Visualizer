@@ -1,6 +1,6 @@
-^C:\USERS\USER\DESKTOP\SAVE\CODE\CPU VISUALIZER\BACKEND\TESTS\CMAKELISTS.TXT
+^C:\USERS\MRZYN\DESKTOP\CPU-VISUALIZER\BACKEND\TESTS\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/user/Desktop/save/Code/CPU Visualizer/backend" "-BC:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build" --check-stamp-file "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrzyn/Desktop/CPU-Visualizer/backend -BC:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build --check-stamp-file C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

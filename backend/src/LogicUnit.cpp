@@ -22,3 +22,25 @@ void LogicUnit::eval(){
     norGate.eval();
     mux4to1.eval();
 }
+
+uint32_t LogicUnit::getWireByPath(const std::string& path) {
+    if (path.rfind("mux4to1.", 0) == 0) {
+        return mux4to1.getWireByPath(path.substr(8));
+    }
+
+    // INPUTS
+    if (path == "x") return x->getValue();
+    if (path == "y") return y->getValue();
+    if (path == "logicFunction") return logicFunction->getValue();
+    
+    // INTERNAL
+    if (path == "ANDWire") return ANDWire.getValue();
+    if (path == "ORWire") return ORWire.getValue();
+    if (path == "XORWire") return XORWire.getValue();
+    if (path == "NORWire") return NORWire.getValue();
+    
+    // OUTPUTS
+    if (path == "logic") return logic.getValue();
+
+    return -1;
+}
