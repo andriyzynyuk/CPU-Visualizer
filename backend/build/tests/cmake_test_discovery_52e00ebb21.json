@@ -1,5 +1,5 @@
 {
-  "tests": 54,
+  "tests": 57,
   "name": "AllTests",
   "testsuites": [
     {
@@ -371,12 +371,27 @@
     },
     {
       "name": "GetWireByPathTest",
-      "tests": 1,
+      "tests": 4,
       "testsuite": [
         {
           "name": "stringTest",
           "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_getWireByPath.cpp",
           "line": 4
+        },
+        {
+          "name": "addi_internal_and_nested_paths",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_getWireByPath.cpp",
+          "line": 19
+        },
+        {
+          "name": "nested_bit_access_and_bounds",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_getWireByPath.cpp",
+          "line": 49
+        },
+        {
+          "name": "unknown_path_returns_minus_one",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_getWireByPath.cpp",
+          "line": 68
         }
       ]
     }
