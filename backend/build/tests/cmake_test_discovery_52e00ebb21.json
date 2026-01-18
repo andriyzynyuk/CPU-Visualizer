@@ -1,5 +1,5 @@
 {
-  "tests": 53,
+  "tests": 57,
   "name": "AllTests",
   "testsuites": [
     {
@@ -8,27 +8,27 @@
       "testsuite": [
         {
           "name": "AndGateTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_gates.cpp",
           "line": 4
         },
         {
           "name": "OrGateTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_gates.cpp",
           "line": 17
         },
         {
           "name": "XorGateTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_gates.cpp",
           "line": 30
         },
         {
           "name": "NotGateTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_gates.cpp",
           "line": 43
         },
         {
           "name": "NorGateTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_gates.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_gates.cpp",
           "line": 54
         }
       ]
@@ -39,12 +39,12 @@
       "testsuite": [
         {
           "name": "MaskingWorks",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_wire.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_wire.cpp",
           "line": 4
         },
         {
           "name": "GetBit",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_wire.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_wire.cpp",
           "line": 11
         }
       ]
@@ -55,7 +55,7 @@
       "testsuite": [
         {
           "name": "AdditionTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_fullAdder.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_fullAdder.cpp",
           "line": 4
         }
       ]
@@ -66,7 +66,7 @@
       "testsuite": [
         {
           "name": "AdderAdditionTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_adder.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_adder.cpp",
           "line": 4
         }
       ]
@@ -77,12 +77,12 @@
       "testsuite": [
         {
           "name": "RightShiftTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_shifter.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_shifter.cpp",
           "line": 4
         },
         {
           "name": "LeftShiftTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_shifter.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_shifter.cpp",
           "line": 21
         }
       ]
@@ -93,12 +93,12 @@
       "testsuite": [
         {
           "name": "MUX4to1Test",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_mux.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_mux.cpp",
           "line": 4
         },
         {
           "name": "MUX2to1Test",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_mux.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_mux.cpp",
           "line": 46
         }
       ]
@@ -109,7 +109,7 @@
       "testsuite": [
         {
           "name": "LogicOperationsTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_lu.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_lu.cpp",
           "line": 4
         }
       ]
@@ -120,17 +120,17 @@
       "testsuite": [
         {
           "name": "PositiveExtension",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_signextender.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_signextender.cpp",
           "line": 4
         },
         {
           "name": "NegativeExtension",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_signextender.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_signextender.cpp",
           "line": 16
         },
         {
           "name": "DifferentSizes",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_signextender.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_signextender.cpp",
           "line": 28
         }
       ]
@@ -141,22 +141,22 @@
       "testsuite": [
         {
           "name": "ALUShifterTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_alu.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_alu.cpp",
           "line": 4
         },
         {
           "name": "ALUSetLessThanTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_alu.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_alu.cpp",
           "line": 46
         },
         {
           "name": "ALUAdderTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_alu.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_alu.cpp",
           "line": 82
         },
         {
           "name": "ALULogicTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_alu.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_alu.cpp",
           "line": 112
         }
       ]
@@ -167,37 +167,37 @@
       "testsuite": [
         {
           "name": "BranchingDisabledTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
           "line": 4
         },
         {
           "name": "BEQTrueTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
           "line": 26
         },
         {
           "name": "BEQFalseTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
           "line": 42
         },
         {
           "name": "BNETrueTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
           "line": 58
         },
         {
           "name": "BNEFalseTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
           "line": 74
         },
         {
           "name": "BLTZTrueTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
           "line": 90
         },
         {
           "name": "BLTZFalseTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_branchCondCheck.cpp",
           "line": 106
         }
       ]
@@ -208,27 +208,27 @@
       "testsuite": [
         {
           "name": "IncrPCTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_nextAddr.cpp",
           "line": 4
         },
         {
           "name": "BranchTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_nextAddr.cpp",
           "line": 32
         },
         {
           "name": "JumpTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_nextAddr.cpp",
           "line": 100
         },
         {
           "name": "JumpRegisterTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_nextAddr.cpp",
           "line": 128
         },
         {
           "name": "SysCallTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_nextAddr.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_nextAddr.cpp",
           "line": 156
         }
       ]
@@ -239,7 +239,7 @@
       "testsuite": [
         {
           "name": "SetRegTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_regFile.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_regFile.cpp",
           "line": 4
         }
       ]
@@ -250,27 +250,27 @@
       "testsuite": [
         {
           "name": "GetSetBits",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instruction.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_instruction.cpp",
           "line": 4
         },
         {
           "name": "RType",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instruction.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_instruction.cpp",
           "line": 15
         },
         {
           "name": "IType",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instruction.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_instruction.cpp",
           "line": 26
         },
         {
           "name": "JType",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instruction.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_instruction.cpp",
           "line": 35
         },
         {
           "name": "ADD",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instruction.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_instruction.cpp",
           "line": 42
         }
       ]
@@ -281,7 +281,7 @@
       "testsuite": [
         {
           "name": "GetInstruction",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_instrCache.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_instrCache.cpp",
           "line": 4
         }
       ]
@@ -292,42 +292,42 @@
       "testsuite": [
         {
           "name": "ADDIInstruction",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_controlUnit.cpp",
           "line": 7
         },
         {
           "name": "SLTIInstruction",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_controlUnit.cpp",
           "line": 42
         },
         {
           "name": "ANDIInstruction",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_controlUnit.cpp",
           "line": 77
         },
         {
           "name": "ORIInstruction",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_controlUnit.cpp",
           "line": 112
         },
         {
           "name": "JUMPInstruction",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_controlUnit.cpp",
           "line": 143
         },
         {
           "name": "BEQInstruction",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_controlUnit.cpp",
           "line": 172
         },
         {
           "name": "ADDInstruction",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_controlUnit.cpp",
           "line": 202
         },
         {
           "name": "SUBInstruction",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_controlUnit.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_controlUnit.cpp",
           "line": 233
         }
       ]
@@ -338,12 +338,12 @@
       "testsuite": [
         {
           "name": "PCInitialization",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_pc.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_pc.cpp",
           "line": 4
         },
         {
           "name": "PCEval",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_pc.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_pc.cpp",
           "line": 13
         }
       ]
@@ -354,18 +354,44 @@
       "testsuite": [
         {
           "name": "SingleInstructionTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_cpu.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_cpu.cpp",
           "line": 4
         },
         {
           "name": "ArithmeticInstructionTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_cpu.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_cpu.cpp",
           "line": 15
         },
         {
           "name": "LogicalInstructionTest",
-          "file": "C:\\Users\\user\\Desktop\\save\\Code\\CPU Visualizer\\backend\\tests\\test_cpu.cpp",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_cpu.cpp",
           "line": 35
+        }
+      ]
+    },
+    {
+      "name": "GetWireByPathTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "stringTest",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_getWireByPath.cpp",
+          "line": 4
+        },
+        {
+          "name": "addi_internal_and_nested_paths",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_getWireByPath.cpp",
+          "line": 19
+        },
+        {
+          "name": "nested_bit_access_and_bounds",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_getWireByPath.cpp",
+          "line": 49
+        },
+        {
+          "name": "unknown_path_returns_minus_one",
+          "file": "C:\\Users\\mrzyn\\Desktop\\CPU-Visualizer\\backend\\tests\\test_getWireByPath.cpp",
+          "line": 68
         }
       ]
     }

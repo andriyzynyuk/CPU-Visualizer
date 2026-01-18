@@ -23,3 +23,18 @@ void RegFile::eval(){
         registers[writeData->getValue()] = regIn->getValue();
     }
 }
+
+uint32_t RegFile::getWireByPath(const std::string& path) {
+
+    if (path.rfind("registers[", 0) == 0) {
+        size_t endBracket = path.find(']');
+        if (endBracket == std::string::npos) return -1;
+        
+        int index = std::stoi(path.substr(10, endBracket - 10));
+        if (index < 0 || index >= 32) return -1;
+        
+        return registers[index];
+    }
+
+    return -1; // Wire not found
+}

@@ -1,11 +1,11 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/cmake_install.cmake",
-		"C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/tests/cmake_install.cmake",
-		"C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-build/cmake_install.cmake",
-		"C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-build/googlemock/cmake_install.cmake",
-		"C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-build/googletest/cmake_install.cmake"
+		"C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/cmake_install.cmake",
+		"C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/tests/cmake_install.cmake",
+		"C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-build/cmake_install.cmake",
+		"C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-build/googletest/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

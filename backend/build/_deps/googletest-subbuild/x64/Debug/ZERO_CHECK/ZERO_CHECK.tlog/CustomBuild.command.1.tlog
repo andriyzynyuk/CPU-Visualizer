@@ -1,6 +1,6 @@
-^C:\USERS\USER\DESKTOP\SAVE\CODE\CPU VISUALIZER\BACKEND\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\81DF20E0DF0C7135A580410375DE2021\GENERATE.STAMP.RULE
+^C:\USERS\MRZYN\DESKTOP\CPU-VISUALIZER\BACKEND\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\051B07C0F0304D9DD1914EB6EEF2B63A\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild" "-BC:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-subbuild/googletest-populate.sln"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild -BC:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-subbuild/googletest-populate.slnx
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

@@ -28,4 +28,5 @@ struct FullAdder : Component {
 
     FullAdder(Wire* X, Wire* Y, Wire* C_IN, Wire& SUM, Wire& C_OUT);
     void eval() override;
+    uint32_t getWireByPath(const std::string& path);
 };

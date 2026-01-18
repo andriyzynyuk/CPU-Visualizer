@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
@@ -22,9 +22,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D2E02B1F-BA64-390D-A599-94427687F4FE}</ProjectGuid>
+    <ProjectGuid>{2B0B43B5-FCC5-3396-9E20-6A244E95728F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>gmock_main</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -33,22 +33,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\lib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\lib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gmock_main.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gmock_main</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gmock_main.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gmock_main</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\lib\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\lib\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gmock_main.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gmock_main</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\lib\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\lib\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gmock_main.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gmock_main</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -97,22 +97,22 @@
       <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
-      <SuppressStartupBanner Condition="'$(VCToolsVersion)' &gt;= '14.29'">true</SuppressStartupBanner>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\lib\Debug\gmock_mainpdb_debug_postfix-NOTFOUND.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\lib\Debug\gmock_mainpdb_debug_postfix-NOTFOUND.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -125,7 +125,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -143,7 +143,7 @@
       <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
-      <SuppressStartupBanner Condition="'$(VCToolsVersion)' &gt;= '14.29'">true</SuppressStartupBanner>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
@@ -152,15 +152,15 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\lib\Release\gmock_main.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\lib\Release\gmock_main.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -173,7 +173,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -191,7 +191,7 @@
       <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
-      <SuppressStartupBanner Condition="'$(VCToolsVersion)' &gt;= '14.29'">true</SuppressStartupBanner>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
@@ -200,15 +200,15 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\lib\MinSizeRel\gmock_main.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\lib\MinSizeRel\gmock_main.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -221,7 +221,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -240,22 +240,22 @@
       <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
-      <SuppressStartupBanner Condition="'$(VCToolsVersion)' &gt;= '14.29'">true</SuppressStartupBanner>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\lib\RelWithDebInfo\gmock_main.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\lib\RelWithDebInfo\gmock_main.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\include;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -267,11 +267,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/user/Desktop/save/Code/CPU Visualizer/backend" "-BC:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build" --check-stamp-file "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrzyn/Desktop/CPU-Visualizer/backend -BC:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build --check-stamp-file C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -279,12 +279,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.2\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindThreads.cmake;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.2\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindThreads.cmake;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/user/Desktop/save/Code/CPU Visualizer/backend" "-BC:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build" --check-stamp-file "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrzyn/Desktop/CPU-Visualizer/backend -BC:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build --check-stamp-file C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -292,12 +292,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.2\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindThreads.cmake;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.2\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindThreads.cmake;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/user/Desktop/save/Code/CPU Visualizer/backend" "-BC:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build" --check-stamp-file "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrzyn/Desktop/CPU-Visualizer/backend -BC:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build --check-stamp-file C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -305,12 +305,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.2\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindThreads.cmake;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.2\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindThreads.cmake;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/user/Desktop/save/Code/CPU Visualizer/backend" "-BC:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build" --check-stamp-file "C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/mrzyn/Desktop/CPU-Visualizer/backend -BC:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build --check-stamp-file C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -318,20 +318,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.2\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindThreads.cmake;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.2\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.2\Modules\FindThreads.cmake;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest-all.cc" />
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\src\gmock-all.cc" />
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\_deps\googletest-src\googlemock\src\gmock_main.cc" />
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googletest\src\gtest-all.cc" />
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\src\gmock-all.cc" />
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\_deps\googletest-src\googlemock\src\gmock_main.cc" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\build\ZERO_CHECK.vcxproj">
-      <Project>{470E02DD-8CF9-3070-9EC3-6B120511999A}</Project>
+    <ProjectReference Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\build\ZERO_CHECK.vcxproj">
+      <Project>{BE250B34-9639-3AFB-8F0D-9D24DE0F910E}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

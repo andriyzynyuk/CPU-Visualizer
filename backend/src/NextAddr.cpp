@@ -52,3 +52,40 @@ void NextAddr::eval(){
 
     mux.eval();
 }
+
+uint32_t NextAddr::getWireByPath(const std::string& path) {
+    if (path.rfind("bccModule.", 0) == 0) {
+        return bccModule.getWireByPath(path.substr(10));
+    }
+    if (path.rfind("adder.", 0) == 0) {
+        return adder.getWireByPath(path.substr(6));
+    }
+    if (path.rfind("mux.", 0) == 0) {
+        return mux.getWireByPath(path.substr(4));
+    }
+
+    // INPUTS
+    if (path == "rt") return rt->getValue();
+    if (path == "rs") return rs->getValue();
+    if (path == "pc") return pc->getValue();
+    if (path == "jta") return jta->getValue();
+    if (path == "SysCallAddr") return SysCallAddr->getValue();
+    if (path == "BrType") return BrType->getValue();
+    if (path == "PCSrc") return PCSrc->getValue();
+    
+    // INTERNAL
+    if (path == "rs30MSB") return rs30MSB.getValue();
+    if (path == "BrTrue") return BrTrue.getValue();
+    if (path == "imm") return imm.getValue();
+    if (path == "imm_SE") return imm_SE.getValue();
+    if (path == "bcc") return bcc.getValue();
+    if (path == "pc4MSB") return pc4MSB.getValue();
+    if (path == "cin") return cin.getValue();
+    if (path == "jtaPC4") return jtaPC4.getValue();
+    
+    // OUTPUTS
+    if (path == "IncrPC") return IncrPC.getValue();
+    if (path == "NextPC") return NextPC.getValue();
+
+    return -1;
+}

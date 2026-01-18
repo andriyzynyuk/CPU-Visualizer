@@ -36,6 +36,29 @@ void MUX4to1::eval(){
     orGate.eval();
 }
 
+uint32_t MUX4to1::getWireByPath(const std::string& path) {
+    // INPUTS
+    if (path == "input0") return input0->getValue();
+    if (path == "input1") return input1->getValue();
+    if (path == "input2") return input2->getValue();
+    if (path == "input3") return input3->getValue();
+    if (path == "s0") return s0->getValue();
+    if (path == "s1") return s1->getValue();
+    
+    // INTERNAL
+    if (path == "s0n") return s0n.getValue();
+    if (path == "s1n") return s1n.getValue();
+    if (path == "ANDWire0") return ANDWire0.getValue();
+    if (path == "ANDWire1") return ANDWire1.getValue();
+    if (path == "ANDWire2") return ANDWire2.getValue();
+    if (path == "ANDWire3") return ANDWire3.getValue();
+    
+    // OUTPUTS
+    if (path == "out") return out.getValue();
+
+    return -1;
+}
+
 MUX2to1::MUX2to1(Wire* IN0, Wire* IN1, Wire* S0, Wire& OUT)
     : input0(IN0), input1(IN1), s0(S0), out(OUT),
         s0n(1), s0n_SE(32), s0_SE(32), ANDWire0(32), ANDWire1(32),
@@ -55,4 +78,21 @@ void MUX2to1::eval(){
     andGate0.eval();
     andGate1.eval();
     orGate.eval();
+}
+
+uint32_t MUX2to1::getWireByPath(const std::string& path) {
+    // INPUTS
+    if (path == "input0") return input0->getValue();
+    if (path == "input1") return input1->getValue();
+    if (path == "s0") return s0->getValue();
+    
+    // INTERNAL
+    if (path == "s0n") return s0n.getValue();
+    if (path == "ANDWire0") return ANDWire0.getValue();
+    if (path == "ANDWire1") return ANDWire1.getValue();
+    
+    // OUTPUTS
+    if (path == "out") return out.getValue();
+
+    return -1;
 }

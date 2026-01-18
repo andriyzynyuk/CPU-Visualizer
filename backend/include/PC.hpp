@@ -18,4 +18,5 @@ struct PC : Component {
 
     PC(Wire* PC_IN, Wire& PC_OUT);
     void eval() override;
+    //uint32_t getWireByPath(const std::string& path);
 };

@@ -31,4 +31,5 @@ struct LogicUnit : Component {
 
     LogicUnit(Wire* x, Wire* y, Wire* logicFunction, Wire& logic);
     void eval() override;
+    uint32_t getWireByPath(const std::string& path);
 };

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <vector>
 #include "Component.hpp"
 #include "Wire.hpp"
 #include "FullAdder.hpp"
@@ -27,4 +26,5 @@ struct Adder : Component {
     Adder(Wire* X, Wire* Y, Wire* C_IN, Wire& SUM, Wire& C_OUT);
     ~Adder();
     void eval() override;
+    uint32_t getWireByPath(const std::string& path);
 };

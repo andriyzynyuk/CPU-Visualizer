@@ -1,64 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_gates.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_gates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_wire.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_wire.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_fullAdder.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_fullAdder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_adder.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_adder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_shifter.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_shifter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_mux.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_mux.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_lu.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_lu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_signextender.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_signextender.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_alu.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_alu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_branchCondCheck.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_branchCondCheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_nextAddr.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_nextAddr.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_regFile.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_regFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_instruction.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_instruction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_instrCache.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_instrCache.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_controlUnit.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_controlUnit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_pc.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_pc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\test_cpu.cpp">
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_cpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\test_getWireByPath.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\user\Desktop\save\Code\CPU Visualizer\backend\tests\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\mrzyn\Desktop\CPU-Visualizer\backend\tests\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{0ABFD06E-AFA0-3B6B-80E2-1E2F51953D49}</UniqueIdentifier>
+      <UniqueIdentifier>{3BF82873-A85C-36B8-9D2B-688E7A63A461}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

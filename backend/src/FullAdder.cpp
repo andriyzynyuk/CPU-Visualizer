@@ -22,3 +22,21 @@ void FullAdder::eval(){
     andGate1.eval();
     orGate0.eval();
 }
+
+uint32_t FullAdder::getWireByPath(const std::string& path) {
+    // INPUTS
+    if (path == "x") return x->getValue();
+    if (path == "y") return y->getValue();
+    if (path == "cin") return cin->getValue();
+    
+    // INTERNAL
+    if (path == "xor0") return xor0.getValue();
+    if (path == "and0") return and0.getValue();
+    if (path == "and1") return and1.getValue();
+    
+    // OUTPUTS
+    if (path == "sum") return sum.getValue();
+    if (path == "cout") return cout.getValue();
+
+    return -1;
+}

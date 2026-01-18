@@ -38,3 +38,30 @@ void BranchCondCheck::eval(){
     s0.set(BrType->getBit(0));
     mux.eval();
 }
+
+uint32_t BranchCondCheck::getWireByPath(const std::string& path) {
+    if (path.rfind("mux.", 0) == 0) {
+        return mux.getWireByPath(path.substr(4));
+    }
+
+    // INPUTS
+    if (path == "rt") return rt->getValue();
+    if (path == "rs") return rs->getValue();
+    if (path == "BrType") return BrType->getValue();
+    
+    // INTERNAL
+    if (path == "rsMSB") return rsMSB.getValue();
+    if (path == "rsNot") return rsNot.getValue();
+    if (path == "cin") return cin.getValue();
+    if (path == "adderResult") return adderResult.getValue();
+    if (path == "ORAdderResult") return ORAdderResult.getValue();
+    if (path == "beq") return beq.getValue();
+    if (path == "const0") return const0.getValue();
+    if (path == "BrTypeMSB") return BrTypeMSB.getValue();
+    if (path == "bltz") return bltz.getValue();
+    
+    // OUTPUTS
+    if (path == "BrTrue") return BrTrue.getValue();
+
+    return -1;
+}

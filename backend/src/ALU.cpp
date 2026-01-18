@@ -35,3 +35,39 @@ void ALU::eval(){
     lu.eval();
     mux.eval();
 }
+
+uint32_t ALU::getWireByPath(const std::string& path) {
+    // if (path.rfind("shifter.", 0) == 0) {
+    //     return shifter.getWireByPath(path.substr(8));
+    // }
+    if (path.rfind("adder.", 0) == 0) {
+        return adder.getWireByPath(path.substr(6));
+    }
+    if (path.rfind("lu.", 0) == 0) {
+        return lu.getWireByPath(path.substr(3));
+    }
+    if (path.rfind("mux.", 0) == 0) {
+        return mux.getWireByPath(path.substr(4));
+    }
+
+    // INPUTS
+    if (path == "x") return x->getValue();
+    if (path == "y") return y->getValue();
+    if (path == "addSub") return addSub->getValue();
+    if (path == "shiftDirection") return shiftDirection->getValue();
+    if (path == "logicFunc") return logicFunc->getValue();
+    if (path == "funcClass") return funcClass->getValue();
+    
+    // INTERNAL
+    if (path == "yXOR") return yXOR.getValue();
+    if (path == "shiftedY") return shiftedY.getValue();
+    if (path == "xPlusY") return xPlusY.getValue();
+    if (path == "logic") return shiftedY.getValue();
+    if (path == "xPlusYMsb") return xPlusY.getValue();
+    
+    // OUTPUTS
+    if (path == "s") return s.getValue();
+    if (path == "Cout") return Cout.getValue();
+
+    return -1;
+}

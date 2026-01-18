@@ -23,4 +23,5 @@ struct InstrCache : Component {
     void eval() override;
     void setInstructions(std::vector<Instruction> Instructions);
     Instruction getCurrentInstruction();
+    //uint32_t getWireByPath(const std::string& path);
 };
