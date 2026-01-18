@@ -11,8 +11,8 @@ C:/Program Files/CMake/share/cmake-4.2/Modules/FindPython3.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/FindThreads.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/WriteBasicConfigVersionFile.cmake
-C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-src/googletest/CMakeLists.txt
-C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-src/googletest/cmake/Config.cmake.in
-C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-src/googletest/cmake/gtest.pc.in
-C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-src/googletest/cmake/gtest_main.pc.in
-C:/Users/user/Desktop/save/Code/CPU Visualizer/backend/build/_deps/googletest-src/googletest/cmake/internal_utils.cmake
+C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-src/googletest/CMakeLists.txt
+C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-src/googletest/cmake/Config.cmake.in
+C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-src/googletest/cmake/gtest.pc.in
+C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-src/googletest/cmake/gtest_main.pc.in
+C:/Users/mrzyn/Desktop/CPU-Visualizer/backend/build/_deps/googletest-src/googletest/cmake/internal_utils.cmake
