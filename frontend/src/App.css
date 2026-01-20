@@ -106,7 +106,7 @@
 }
 
 .menu-btn:hover {
-  background: rgba(224, 224, 224, 0.85);
+  background: rgba(0, 221, 48, 0.2);
   border-color: rgba(0, 221, 48, 0.6);
   box-shadow: 0 0 15px rgba(0, 221, 48, 0.4);
 }
@@ -116,7 +116,7 @@
   position: relative;
   width: 20px;
   height: 2px;
-  background: rgba(0, 221, 48, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -128,7 +128,7 @@
   left: 0;
   width: 20px;
   height: 2px;
-  background: rgba(0, 221, 48, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -207,18 +207,18 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     0 0 15px rgba(0, 221, 48, 0.2);
   pointer-events: auto;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-100%);
   animation: tooltipFadeIn 0.2s ease-out;
 }
 
 @keyframes tooltipFadeIn {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(10px);
+    transform: translateX(-50%) translateY(-90%);
   }
   to {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(-100%);
   }
 }
 
@@ -353,4 +353,49 @@
   background: rgba(200, 200, 200, 0.4);
   border-color: rgba(150, 150, 150, 0.3);
   color: rgba(0, 0, 0, 0.35);
+}
+
+/* Back Button */
+.back-btn {
+  position: fixed;
+  top: 5rem;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 200, 80, 0.4);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+  z-index: 1000;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.back-btn:hover {
+  background: rgba(0, 221, 48, 0.2);
+  border-color: rgba(0, 221, 48, 0.6);
+  box-shadow: 0 0 15px rgba(0, 221, 48, 0.4);
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.back-btn:active {
+  transform: scale(0.95);
+}
+
+.back-btn svg {
+  width: 20px;
+  height: 20px;
 }

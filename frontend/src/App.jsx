@@ -80,6 +80,7 @@ export default function App() {
 
       {current.view === "Adder" && (
         <AdderView 
+          basePath={current.params?.basePath}
           onNavigate={navigate}
           onBack={goBack}  
         />
@@ -87,6 +88,8 @@ export default function App() {
 
       {current.view === "FullAdder" && (
         <FullAdderView
+          bit={current.params?.bit}
+          basePath={current.params?.basePath}
           onNavigate={navigate}
           onBack={goBack}  
         />
@@ -101,6 +104,7 @@ export default function App() {
 
       {current.view === "MUX2to1" && (
         <MUX2to1View
+          basePath={current.params?.basePath}
           onNavigate={navigate}
           onBack={goBack}
         />
@@ -108,6 +112,7 @@ export default function App() {
 
       {current.view === "MUX4to1" && (
         <MUX4to1View
+          basePath={current.params?.basePath}
           onNavigate={navigate}
           onBack={goBack}
         />

@@ -128,6 +128,9 @@ uint32_t CPU::getWireByPath(const std::string& path) {
     if (path.rfind("regInSrc_MUX.", 0) == 0) {
         return regInSrc_MUX.getWireByPath(path.substr(13));
     }
+    if (path.rfind("regDstMux.", 0) == 0) {
+        return regDstMux.getWireByPath(path.substr(10));
+    }
     
     // INTERNAL
     if (path == "IncrPC") return IncrPC.getValue();

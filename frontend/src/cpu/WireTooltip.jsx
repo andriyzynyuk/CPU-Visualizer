@@ -50,7 +50,7 @@ export function useWireTooltip(svgContent, wireValues, wires, setTooltip) {
     setTooltip({
       visible: true,
       x: x,
-      y: y - 60, // Position above the click point
+      y: y - 6, // Position above the click point
       name: displayName,
       value: wireValue ?? 0,
     });

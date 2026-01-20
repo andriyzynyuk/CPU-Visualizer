@@ -43,6 +43,9 @@ uint32_t BranchCondCheck::getWireByPath(const std::string& path) {
     if (path.rfind("mux.", 0) == 0) {
         return mux.getWireByPath(path.substr(4));
     }
+    if (path.rfind("adder.", 0) == 0) {
+        return adder.getWireByPath(path.substr(6));
+    }
 
     // INPUTS
     if (path == "rt") return rt->getValue();

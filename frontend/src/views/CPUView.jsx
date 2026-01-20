@@ -3,7 +3,6 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { useCpu } from "../cpu/CpuContext.jsx";
 import { WireTooltip, useWireTooltip } from "../cpu/WireTooltip.jsx";
 
-// Wire configuration - add more wires here as needed
 const WIRES = [
   { id: "WireIncrPC_CPU", path: "IncrPC" },
   { id: "WireNextPC_CPU", path: "NextPC" },
@@ -33,29 +32,27 @@ const WIRES = [
   { id: "WireDataRead_CPU", path: "dataRead" },
   { id: "WireDataWrite_CPU", path: "dataWrite" },
   { id: "WireBrJump_CPU", path: "PCSrc" }
+  //ADDSUB, LOGICFUNC, BrType, ShiftDirection, sh
 ];
 
-// SVG dimensions (match your actual SVG)
 const SVG_WIDTH = 3099;
 const SVG_HEIGHT = 1605;
 
 export default function CPUView({ onNavigate }) {
   const [svgContent, setSvgContent] = useState(null);
+  const [svgReady, setSvgReady] = useState(false);
   const [wireValues, setWireValues] = useState({});
   const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, name: "", value: 0 });
   const { api, cpu, ready, currentCycle, totalInstructions, cpuVersion, nextCycle, prevCycle } = useCpu();
   const svgContainerRef = useRef(null);
 
-  // Use wire tooltip hook
-  useWireTooltip(svgContent, wireValues, WIRES, setTooltip);
+  useWireTooltip(svgReady, wireValues, WIRES, setTooltip);
 
   const closeTooltip = () => setTooltip({ ...tooltip, visible: false });
 
-  // Determine button states
   const canGoBack = currentCycle > 0;
   const canGoForward = currentCycle < totalInstructions;
 
-  // Load SVG
   useEffect(() => {
     fetch("/svg/CPU.svg")
       .then((res) => res.text())
@@ -63,18 +60,17 @@ export default function CPUView({ onNavigate }) {
       .catch((err) => console.error("Failed to load CPU.svg", err));
   }, []);
 
-  // Inject SVG content into container and set dimensions
   useEffect(() => {
     if (!svgContent || !svgContainerRef.current) return;
     svgContainerRef.current.innerHTML = svgContent;
 
-    // Get the injected SVG element and ensure proper sizing
     const svgElement = svgContainerRef.current.querySelector('svg');
     if (svgElement) {
       svgElement.setAttribute('width', SVG_WIDTH);
       svgElement.setAttribute('height', SVG_HEIGHT);
       svgElement.style.display = 'block';
     }
+    setSvgReady(true);
   }, [svgContent]);
 
   // Read wire values after CPU initialization or cycle change
@@ -100,7 +96,7 @@ export default function CPUView({ onNavigate }) {
 
   // Color wires based on their values
   useEffect(() => {
-    if (!svgContent || Object.keys(wireValues).length === 0) return;
+    if (!svgReady || Object.keys(wireValues).length === 0) return;
     
     WIRES.forEach(({ id, path }) => {
       const el = document.getElementById(id);
@@ -120,11 +116,11 @@ export default function CPUView({ onNavigate }) {
         }
       });
     });
-  }, [svgContent, wireValues]);
+  }, [svgReady, wireValues]);
 
   // Setup component click handlers
   useEffect(() => {
-    if (!svgContent) return;
+    if (!svgReady) return;
 
     const nextAddr = document.getElementById("NextAddr_CPU");
     const mux4to10 = document.getElementById("MUX4to10_CPU");
@@ -133,8 +129,9 @@ export default function CPUView({ onNavigate }) {
     const mux4to11 = document.getElementById("MUX4to11_CPU");
 
     const handleNextAddrClick = () => onNavigate("NextAddr");
-    const handleMUX4to1Click = () => onNavigate("MUX4to1");
-    const handleMUX2to1Click = () => onNavigate("MUX2to1");
+    const handleMUX4to10Click = () => onNavigate("MUX4to1", { basePath: "regDstMux" });
+    const handleMUX4to11Click = () => onNavigate("MUX4to1", { basePath: "regInSrc_MUX" });
+    const handleMUX2to1Click = () => onNavigate("MUX2to1", { basePath: "ALUSrc_MUX" });
     const handleALUClick = () => onNavigate("ALU");
 
     const handleNextAddrMouseEnter = () => {
@@ -144,12 +141,17 @@ export default function CPUView({ onNavigate }) {
       if (nextAddr) nextAddr.style.opacity = '1';
     };
 
-    const handleMUX4to1MouseEnter = () => {
+    const handleMUX4to10MouseEnter = () => {
       if (mux4to10) mux4to10.style.opacity = '0.7';
+    };
+    const handleMUX4to10MouseLeave = () => {
+      if (mux4to10) mux4to10.style.opacity = '1';
+    };
+
+    const handleMUX4to11MouseEnter = () => {
       if (mux4to11) mux4to11.style.opacity = '0.7';
     };
-    const handleMUX4to1MouseLeave = () => {
-      if (mux4to10) mux4to10.style.opacity = '1';
+    const handleMUX4to11MouseLeave = () => {
       if (mux4to11) mux4to11.style.opacity = '1';
     };
 
@@ -172,9 +174,9 @@ export default function CPUView({ onNavigate }) {
     nextAddr?.addEventListener("mouseleave", handleNextAddrMouseLeave);
     if (nextAddr) nextAddr.style.cursor = 'pointer';
 
-    mux4to10?.addEventListener("click", handleMUX4to1Click);
-    mux4to10?.addEventListener("mouseenter", handleMUX4to1MouseEnter);
-    mux4to10?.addEventListener("mouseleave", handleMUX4to1MouseLeave);
+    mux4to10?.addEventListener("click", handleMUX4to10Click);
+    mux4to10?.addEventListener("mouseenter", handleMUX4to10MouseEnter);
+    mux4to10?.addEventListener("mouseleave", handleMUX4to10MouseLeave);
     if (mux4to10) mux4to10.style.cursor = 'pointer';
 
     mux2to1?.addEventListener("click", handleMUX2to1Click);
@@ -187,29 +189,29 @@ export default function CPUView({ onNavigate }) {
     alu?.addEventListener("mouseleave", handleALUMouseLeave);
     if (alu) alu.style.cursor = 'pointer';
 
-    mux4to11?.addEventListener("click", handleMUX4to1Click);
-    mux4to11?.addEventListener("mouseenter", handleMUX4to1MouseEnter);
-    mux4to11?.addEventListener("mouseleave", handleMUX4to1MouseLeave);
+    mux4to11?.addEventListener("click", handleMUX4to11Click);
+    mux4to11?.addEventListener("mouseenter", handleMUX4to11MouseEnter);
+    mux4to11?.addEventListener("mouseleave", handleMUX4to11MouseLeave);
     if (mux4to11) mux4to11.style.cursor = 'pointer';
 
     return () => {
       nextAddr?.removeEventListener("click", handleNextAddrClick);
       nextAddr?.removeEventListener("mouseenter", handleNextAddrMouseEnter);
       nextAddr?.removeEventListener("mouseleave", handleNextAddrMouseLeave);
-      mux4to10?.removeEventListener("click", handleMUX4to1Click);
-      mux4to10?.removeEventListener("mouseenter", handleMUX4to1MouseEnter);
-      mux4to10?.removeEventListener("mouseleave", handleMUX4to1MouseLeave);
+      mux4to10?.removeEventListener("click", handleMUX4to10Click);
+      mux4to10?.removeEventListener("mouseenter", handleMUX4to10MouseEnter);
+      mux4to10?.removeEventListener("mouseleave", handleMUX4to10MouseLeave);
       mux2to1?.removeEventListener("click", handleMUX2to1Click);
       mux2to1?.removeEventListener("mouseenter", handleMUX2to1MouseEnter);
       mux2to1?.removeEventListener("mouseleave", handleMUX2to1MouseLeave);
       alu?.removeEventListener("click", handleALUClick);
       alu?.removeEventListener("mouseenter", handleALUMouseEnter);
       alu?.removeEventListener("mouseleave", handleALUMouseLeave);
-      mux4to11?.removeEventListener("click", handleMUX4to1Click);
-      mux4to11?.removeEventListener("mouseenter", handleMUX4to1MouseEnter);
-      mux4to11?.removeEventListener("mouseleave", handleMUX4to1MouseLeave);
+      mux4to11?.removeEventListener("click", handleMUX4to11Click);
+      mux4to11?.removeEventListener("mouseenter", handleMUX4to11MouseEnter);
+      mux4to11?.removeEventListener("mouseleave", handleMUX4to11MouseLeave);
     };
-  }, [svgContent, onNavigate]);
+  }, [svgReady, onNavigate]);
 
   return (
     <div className="diagram-container" onClick={closeTooltip}>
@@ -235,7 +237,7 @@ export default function CPUView({ onNavigate }) {
       </div>
 
       <TransformWrapper
-        initialScale={0.4}
+        initialScale={0.5}
         minScale={0.2}
         maxScale={20}
         centerOnInit={true}

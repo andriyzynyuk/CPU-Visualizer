@@ -1,6 +1,5 @@
 <svg width="688" height="5631" viewBox="0 0 688 5631" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="688" height="5631" fill="#1E1E1E"/>
-<rect id="Background_Adder" width="688" height="5631" fill="white"/>
+<rect id="Background_Adder" width="688" height="5631" fill="transparent"/>
 <g id="XY_Text">
 <g id="X0">
 <path id="x" d="M9.52734 88.1738H13.623L17.9473 94.8008L22.3242 88.1738L26.1738 88.2617L19.8281 97.3496L26.4551 107H22.4121L17.7363 99.9336L13.2012 107H9.19336L15.8203 97.3496L9.52734 88.1738Z" fill="black"/>
