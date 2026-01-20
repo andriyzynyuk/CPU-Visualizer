@@ -1,8 +1,18 @@
 import { useEffect, useState } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { WireTooltip, useWireTooltip } from "../cpu/WireTooltip.jsx";
+
+// Wire configuration for BranchCondCheck view
+const WIRES = [];
 
 export default function BranchCondCheckView({ onNavigate, onBack }) {
     const [svgContent, setSvgContent] = useState(null);
+    const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, name: "", value: 0 });
+
+    // Use wire tooltip hook
+    useWireTooltip(svgContent, {}, WIRES, setTooltip);
+
+    const closeTooltip = () => setTooltip({ ...tooltip, visible: false });
 
     useEffect(() => {
         fetch("/svg/BranchCondCheck.svg")
@@ -38,7 +48,8 @@ export default function BranchCondCheckView({ onNavigate, onBack }) {
 }, [svgContent, onNavigate]);
 
   return (
-    <div className="diagram-container">
+    <div className="diagram-container" onClick={closeTooltip}>
+        <WireTooltip tooltip={tooltip} onClose={closeTooltip} />
         <button onClick={onBack}>Back</button>
         <h2>Branch Condition Checker</h2>
         <TransformWrapper 

@@ -13,6 +13,7 @@ TEST(GetWireByPathTest, stringTest) {
     EXPECT_EQ(cpu.getWireByPath("alu.x"), 0);
     EXPECT_EQ(cpu.getWireByPath("alu.y"), 50);
     EXPECT_EQ(cpu.getWireByPath("alu.adder.Y_bits[1]"), 1);
+    EXPECT_EQ(cpu.getWireByPath("IncrPC"), 1);
 }
 
 // AI test

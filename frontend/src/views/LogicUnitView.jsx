@@ -1,8 +1,18 @@
 import { useEffect, useState } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { WireTooltip, useWireTooltip } from "../cpu/WireTooltip.jsx";
+
+// Wire configuration for LogicUnit view
+const WIRES = [];
 
 export default function LogicUnitView({ onNavigate, onBack }) {
   const [svgContent, setSvgContent] = useState(null);
+  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, name: "", value: 0 });
+
+  // Use wire tooltip hook
+  useWireTooltip(svgContent, {}, WIRES, setTooltip);
+
+  const closeTooltip = () => setTooltip({ ...tooltip, visible: false });
 
   useEffect(() => {
     fetch("/svg/LogicUnit.svg")
@@ -27,7 +37,8 @@ export default function LogicUnitView({ onNavigate, onBack }) {
   }, [svgContent, onNavigate]);
 
   return (
-    <div className="diagram-container">
+    <div className="diagram-container" onClick={closeTooltip}>
+        <WireTooltip tooltip={tooltip} onClose={closeTooltip} />
         <button onClick={onBack}>Back</button>
         <h2>Logic Unit</h2>
         <TransformWrapper

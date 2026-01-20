@@ -37,8 +37,8 @@ extern "C" {
         cpu->loadInstructions(instructions);
     }
 
-    uint32_t cpu_get_wire_value(CPU* cpu, std::string wire) {
-        return cpu->getWireByPath(wire);
+    uint32_t cpu_get_wire_value(CPU* cpu, const char* wire) {
+        return cpu->getWireByPath(std::string(wire));
     }
 
     // R Type Instructions

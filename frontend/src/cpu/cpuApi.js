@@ -18,6 +18,26 @@ export async function getCpuApi() {
     m.ccall('cpu_load_instruction', null, ['number', 'number'], [cpu, instr]);
   }
 
+  // Multiple-instruction load - writes directly to HEAPU32 and calls C function
+  function cpu_load_instructions(cpu, instructions) {
+    const count = instructions.length;
+    // Allocate space for uint32_t array (4 bytes each)
+    const bytesNeeded = count * 4;
+    // Find a safe location in the heap - use a high address that won't conflict
+    // We'll write directly to HEAPU32 at a temporary location
+    const baseOffset = m.HEAPU32.length - count - 100; // Use end of heap
+    const ptr = baseOffset * 4; // Convert to byte address
+    
+    // Copy instructions to WASM memory
+    for (let i = 0; i < count; i++) {
+      m.HEAPU32[baseOffset + i] = instructions[i];
+    }
+    
+    // Call the C function with cwrap
+    const loadInstructions = m.cwrap('cpu_load_instructions', null, ['number', 'number', 'number']);
+    loadInstructions(cpu, ptr, count);
+  }
+
   api = {
     module: m,
     cpu_create,
@@ -26,6 +46,7 @@ export async function getCpuApi() {
     cpu_execute_cycle,
     cpu_get_wire_value,
     cpu_load_instruction,
+    cpu_load_instructions,
   };
   return api;
 }

@@ -1,6 +1,5 @@
 <svg width="1568" height="1046" viewBox="0 0 1568 1046" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="1568" height="1046" fill="#1E1E1E"/>
-<rect id="Background_ALU" width="1568" height="1046" fill="white"/>
+<rect id="Background_ALU" width="1568" height="1046" fill="transparent"/>
 <line id="Line 2" x1="136.939" y1="418.939" x2="162.939" y2="392.939" stroke="black" stroke-width="3"/>
 <line id="Line 11" x1="756.939" y1="979.939" x2="782.939" y2="953.939" stroke="black" stroke-width="3"/>
 <line id="Line 8" x1="136.939" y1="418.939" x2="162.939" y2="392.939" stroke="black" stroke-width="3"/>
