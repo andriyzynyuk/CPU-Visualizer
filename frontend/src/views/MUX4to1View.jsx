@@ -44,8 +44,7 @@ export default function MUX4to1View({ basePath = "regDstMux", onBack }) {
   const closeTooltip = () => setTooltip({ ...tooltip, visible: false });
 
   const canGoBack = currentCycle > 0;
-  const canGoForward = currentCycle < maxCycles && !hasFinished;
-
+  const canGoForward = currentCycle < maxCycles;
   useEffect(() => {
     fetch("/svg/MUX4to1.svg")
       .then((res) => res.text())

@@ -51,7 +51,7 @@ export default function CPUView({ onNavigate }) {
   const closeTooltip = () => setTooltip({ ...tooltip, visible: false });
 
   const canGoBack = currentCycle > 0;
-  const canGoForward = currentCycle < maxCycles && !hasFinished;
+  const canGoForward = currentCycle < maxCycles;
 
   useEffect(() => {
     fetch("/svg/CPU.svg")

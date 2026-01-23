@@ -69,15 +69,8 @@ export function CpuProvider({ children }) {
     
     cpuRef.current = newCpu;
     setTotalInstructions(instructions.length);
-
-    let calculatedMaxCycles;
-    if (instructions.length > 0) {
-      calculatedMaxCycles = MAX_EXECUTION_CYCLES;
-    } else {
-      calculatedMaxCycles = 0;
-    }
     
-    setMaxCycles(calculatedMaxCycles);
+    setMaxCycles(instructions.length > 0 ? MAX_EXECUTION_CYCLES : 0);
     setCpuVersion(v => v + 1);
     setCurrentCycle(0);
     setCurrentInstructionText(null);
@@ -160,27 +153,30 @@ export function CpuProvider({ children }) {
     const api = apiRef.current;
     const cpu = cpuRef.current;
     
-    if (hasReachedFinish(api, cpu)) return;
-    
-    if (currentCycle >= maxCycles) return;
+    // Safety limit to prevent infinite loops
+    if (currentCycle >= MAX_EXECUTION_CYCLES) return;
     
     const nextCycleNum = currentCycle + 1;
+    const hasAlreadyFinished = hasReachedFinish(api, cpu);
     
-    if (currentCycle === 0) {
-      api.cpu_first_cycle(cpu);
-    } else {
-      api.cpu_execute_cycle(cpu);
-    }
-    
-    const newOutputs = collectOutputsForCycle(api, cpu, nextCycleNum, collectedOutputsRef.current);
-    if (newOutputs.length > 0) {
-      setOutputs(prev => [...prev, ...newOutputs]);
+    // Only execute cycle if program hasn't finished yet
+    if (!hasAlreadyFinished) {
+      if (currentCycle === 0) {
+        api.cpu_first_cycle(cpu);
+      } else {
+        api.cpu_execute_cycle(cpu);
+      }
+      
+      const newOutputs = collectOutputsForCycle(api, cpu, nextCycleNum, collectedOutputsRef.current);
+      if (newOutputs.length > 0) {
+        setOutputs(prev => [...prev, ...newOutputs]);
+      }
     }
     
     setCpuVersion(v => v + 1);
     setCurrentCycle(nextCycleNum);
     updateCurrentInstructionText(api, cpu, nextCycleNum);
-  }, [currentCycle, maxCycles, collectOutputsForCycle, updateCurrentInstructionText, hasReachedFinish]);
+  }, [currentCycle, collectOutputsForCycle, updateCurrentInstructionText, hasReachedFinish]);
 
   const prevCycle = useCallback(() => {
     if (currentCycle <= 0) return;

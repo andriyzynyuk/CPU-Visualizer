@@ -138,24 +138,7 @@ function parseInstruction(code, instrLib, labels, currentIndex, lineNum) {
         break;
     }
   }
-  
-  const branchImmMatch = trimmed.match(/^(beq|bne)\s+(\d+)\s*,\s*(\d+)\s*,\s*(-?\d+)$/);
-  if (branchImmMatch) {
-    const [, instr, arg1, arg2, arg3] = branchImmMatch;
-    const rs = parseInt(arg1, 10);
-    const rt = parseInt(arg2, 10);
-    const offset = parseInt(arg3, 10);
-    
-    switch (instr) {
-      case 'beq':
-        return instrLib.instr_BEQ(rs, rt, offset);
-      case 'bne':
-        return instrLib.instr_BNE(rs, rt, offset);
-      default:
-        break;
-    }
-  }
-  
+
   const bltzLabelMatch = trimmed.match(/^bltz\s+(\d+)\s*,\s*([a-zA-Z_][a-zA-Z0-9_]*)$/);
   if (bltzLabelMatch) {
     const [, arg1, labelName] = bltzLabelMatch;
@@ -169,20 +152,6 @@ function parseInstruction(code, instrLib, labels, currentIndex, lineNum) {
     const targetIndex = labels[targetLabel];
     const offset = calculateBranchOffset(currentIndex, targetIndex);
     return instrLib.instr_BLTZ(rs, offset);
-  }
-  
-  const bltzImmMatch = trimmed.match(/^bltz\s+(\d+)\s*,\s*(-?\d+)$/);
-  if (bltzImmMatch) {
-    const [, arg1, arg2] = bltzImmMatch;
-    const rs = parseInt(arg1, 10);
-    const offset = parseInt(arg2, 10);
-    return instrLib.instr_BLTZ(rs, offset);
-  }
-  
-  const jrMatch = trimmed.match(/^jr\s+(\d+)$/);
-  if (jrMatch) {
-    const rs = parseInt(jrMatch[1], 10);
-    return instrLib.instr_JR(rs);
   }
   
   const jTypeLabelMatch = trimmed.match(/^(j|jal)\s+([a-zA-Z_][a-zA-Z0-9_]*)$/);
@@ -207,22 +176,7 @@ function parseInstruction(code, instrLib, labels, currentIndex, lineNum) {
     }
   }
   
-  const jTypeImmMatch = trimmed.match(/^(j|jal)\s+(\d+)$/);
-  if (jTypeImmMatch) {
-    const [, instr, arg1] = jTypeImmMatch;
-    const jumpAddr = parseInt(arg1, 10);
-    
-    switch (instr) {
-      case 'j':
-        return instrLib.instr_JUMP(jumpAddr);
-      case 'jal':
-        return instrLib.instr_JAL(jumpAddr);
-      default:
-        break;
-    }
-  }
-  
-  return { error: 'Invalid instruction format' };
+  return { error: `Unrecognized instruction format` };
 }
 
 function parseCode(codeText, instrLib) {

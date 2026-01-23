@@ -35,7 +35,7 @@ export default function BranchCondCheckView({ onNavigate, onBack }) {
   const closeTooltip = () => setTooltip({ ...tooltip, visible: false });
 
   const canGoBack = currentCycle > 0;
-  const canGoForward = currentCycle < maxCycles && !hasFinished;
+  const canGoForward = currentCycle < maxCycles;
 
   useEffect(() => {
     fetch("/svg/BranchCondCheck.svg")
