@@ -22,7 +22,7 @@ export default function LogicUnitView({ onNavigate, onBack }) {
   const [svgReady, setSvgReady] = useState(false);
   const [wireValues, setWireValues] = useState({});
   const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, name: "", value: 0 });
-  const { api, cpu, ready, currentCycle, totalInstructions, cpuVersion, nextCycle, prevCycle } = useCpu();
+  const { api, cpu, ready, currentCycle, currentInstructionText, hasFinished, maxCycles, cpuVersion, nextCycle, prevCycle } = useCpu();
   const svgContainerRef = useRef(null);
 
   useWireTooltip(svgReady, wireValues, WIRES, setTooltip);
@@ -30,7 +30,7 @@ export default function LogicUnitView({ onNavigate, onBack }) {
   const closeTooltip = () => setTooltip({ ...tooltip, visible: false });
 
   const canGoBack = currentCycle > 0;
-  const canGoForward = currentCycle < totalInstructions;
+  const canGoForward = currentCycle < maxCycles && !hasFinished;
 
   useEffect(() => {
     fetch("/svg/LogicUnit.svg")
@@ -55,7 +55,7 @@ export default function LogicUnitView({ onNavigate, onBack }) {
   useEffect(() => {
     if (!ready || !api || !cpu) return;
 
-    if (currentCycle === 0) {
+    if (currentCycle === 0 || hasFinished) {
       const values = {};
       WIRES.forEach(({ path }) => {
         values[path] = 0;
@@ -69,7 +69,7 @@ export default function LogicUnitView({ onNavigate, onBack }) {
       values[path] = api.cpu_get_wire_value(cpu, path);
     });
     setWireValues(values);
-  }, [ready, api, cpu, currentCycle, cpuVersion]);
+  }, [ready, api, cpu, currentCycle, hasFinished, cpuVersion]);
 
   useEffect(() => {
     if (!svgReady || Object.keys(wireValues).length === 0) return;
@@ -150,6 +150,9 @@ export default function LogicUnitView({ onNavigate, onBack }) {
         >
           &gt;
         </button>
+      </div>
+      <div className="current-instruction-display">
+        Current Instruction: {hasFinished ? 'finished' : (currentInstructionText || 'off')}
       </div>
 
       <TransformWrapper

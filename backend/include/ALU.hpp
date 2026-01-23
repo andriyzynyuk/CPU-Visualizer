@@ -25,7 +25,6 @@ struct ALU : Component {
     Wire xPlusYMsb;
 
     Wire AddSub_SE;
-    Wire xPlusYMsb_SE;
 
     Wire funcClass_s0;
     Wire funcClass_s1;
@@ -39,7 +38,6 @@ struct ALU : Component {
     XorGate xorGate;
     Shifter shifter;
     Adder adder;
-    SignExtender MSB_SE;
     LogicUnit lu;
     MUX4to1 mux;
     

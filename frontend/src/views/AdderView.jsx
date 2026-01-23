@@ -3,18 +3,15 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { useCpu } from "../cpu/CpuContext.jsx";
 import { WireTooltip, useWireTooltip } from "../cpu/WireTooltip.jsx";
 
-// Generate wire definitions for all 32 full adders
 function generateWireDefs() {
   const defs = [];
-  
-  // carries[0] is the cin (AddSub signal)
   defs.push({ id: "WireAddSub_Adder", relPath: "carries[0]" });
   
   for (let i = 0; i < 32; i++) {
     defs.push({ id: `WireX${i}_Adder`, relPath: `X_bits[${i}]` });
     defs.push({ id: `WireY${i}_Adder`, relPath: `Y_bits[${i}]` });
     defs.push({ id: `WireS${i}_Adder`, relPath: `sum_bits[${i}]` });
-    // carries[1] through carries[32] (cout of each full adder)
+
     defs.push({ id: `WireC${i + 1}_Adder`, relPath: `carries[${i + 1}]` });
   }
   
@@ -38,7 +35,7 @@ export default function AdderView({ basePath = "alu.adder", onNavigate, onBack }
   const [svgReady, setSvgReady] = useState(false);
   const [wireValues, setWireValues] = useState({});
   const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, name: "", value: 0 });
-  const { api, cpu, ready, currentCycle, totalInstructions, cpuVersion, nextCycle, prevCycle } = useCpu();
+  const { api, cpu, ready, currentCycle, currentInstructionText, hasFinished, maxCycles, cpuVersion, nextCycle, prevCycle } = useCpu();
   const svgContainerRef = useRef(null);
 
   const WIRES = buildWires(basePath);
@@ -48,7 +45,7 @@ export default function AdderView({ basePath = "alu.adder", onNavigate, onBack }
   const closeTooltip = () => setTooltip({ ...tooltip, visible: false });
 
   const canGoBack = currentCycle > 0;
-  const canGoForward = currentCycle < totalInstructions;
+  const canGoForward = currentCycle < maxCycles && !hasFinished;
 
   useEffect(() => {
     fetch("/svg/Adder.svg")
@@ -73,7 +70,7 @@ export default function AdderView({ basePath = "alu.adder", onNavigate, onBack }
   useEffect(() => {
     if (!ready || !api || !cpu) return;
 
-    if (currentCycle === 0) {
+    if (currentCycle === 0 || hasFinished) {
       const values = {};
       WIRES.forEach(({ path }) => {
         values[path] = 0;
@@ -87,7 +84,7 @@ export default function AdderView({ basePath = "alu.adder", onNavigate, onBack }
       values[path] = api.cpu_get_wire_value(cpu, path);
     });
     setWireValues(values);
-  }, [ready, api, cpu, currentCycle, cpuVersion, basePath]);
+  }, [ready, api, cpu, currentCycle, hasFinished, cpuVersion, basePath]);
 
   useEffect(() => {
     if (!svgReady || Object.keys(wireValues).length === 0) return;
@@ -115,7 +112,6 @@ export default function AdderView({ basePath = "alu.adder", onNavigate, onBack }
   useEffect(() => {
     if (!svgReady) return;
 
-    // Set up click handlers for all 32 full adders (FullAdder0_Adder through FullAdder31_Adder)
     const fullAdderElements = [];
     const handlers = [];
 
@@ -181,6 +177,9 @@ export default function AdderView({ basePath = "alu.adder", onNavigate, onBack }
           >
             &gt;
           </button>
+        </div>
+        <div className="current-instruction-display">
+          Current Instruction: {hasFinished ? 'finished' : (currentInstructionText || 'off')}
         </div>
   
         <TransformWrapper

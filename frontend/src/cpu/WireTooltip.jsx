@@ -1,10 +1,10 @@
 import { useEffect, useCallback } from "react";
 
 /**
- * WireTooltip component that displays wire name and value on click
+ * displays wire name and value on click
  * @param {Object} props
- * @param {Object} props.tooltip - Tooltip state {visible, x, y, name, value}
- * @param {Function} props.onClose - Callback to close the tooltip
+ * @param {Object} props.tooltip
+ * @param {Function} props.onClose
  */
 export function WireTooltip({ tooltip, onClose }) {
   if (!tooltip.visible) return null;
@@ -29,28 +29,26 @@ export function WireTooltip({ tooltip, onClose }) {
 }
 
 /**
- * Custom hook to handle wire click events and tooltip state
- * @param {string} svgContent - The SVG content string
- * @param {Object} wireValues - Object mapping wire paths to values
- * @param {Array} wires - Array of wire configurations {id, path}
- * @param {Function} setTooltip - State setter for tooltip
+ * handle wire click events and tooltip state
+ * @param {string} svgContent
+ * @param {Object} wireValues
+ * @param {Array} wires
+ * @param {Function} setTooltip
  * @returns {void}
  */
 export function useWireTooltip(svgContent, wireValues, wires, setTooltip) {
   const handleWireClick = useCallback((e, wireName, wireValue) => {
     e.stopPropagation();
     
-    // Get click position relative to the viewport
     const x = e.clientX;
     const y = e.clientY;
     
-    // Format the wire name for display (remove prefixes like "Wire" and suffixes like "_CPU")
     const displayName = formatWireName(wireName);
     
     setTooltip({
       visible: true,
       x: x,
-      y: y - 6, // Position above the click point
+      y: y - 6,
       name: displayName,
       value: wireValue ?? 0,
     });
@@ -61,7 +59,6 @@ export function useWireTooltip(svgContent, wireValues, wires, setTooltip) {
 
     const handlers = [];
 
-    // Add click handlers to all wires
     wires.forEach(({ id, path }) => {
       const el = document.getElementById(id);
       if (!el) return;
@@ -75,16 +72,13 @@ export function useWireTooltip(svgContent, wireValues, wires, setTooltip) {
       handlers.push({ el, handler });
     });
 
-    // Also handle generic Wire elements that start with "Wire"
     const allWireElements = document.querySelectorAll('[id^="Wire"]');
     allWireElements.forEach((el) => {
       const wireId = el.id;
-      // Check if this wire already has a handler from the WIRES config
       const isConfigured = wires.some(w => w.id === wireId);
       
       if (!isConfigured) {
         const handler = (e) => {
-          // For unconfigured wires, show the ID with value "N/A"
           handleWireClick(e, wireId, "N/A");
         };
         el.addEventListener("click", handler);
@@ -102,11 +96,10 @@ export function useWireTooltip(svgContent, wireValues, wires, setTooltip) {
 
 /**
  * Format wire name for display
- * @param {string} wireName - Raw wire ID/name
- * @returns {string} - Formatted display name
+ * @param {string} wireName
+ * @returns {string}
  */
 function formatWireName(wireName) {
-  // Remove common prefixes and suffixes
   let name = wireName
     .replace(/^Wire_?/, "")
     .replace(/_CPU$/, "")
@@ -116,7 +109,6 @@ function formatWireName(wireName) {
     .replace(/_Shifter$/, "")
     .replace(/_Adder$/, "");
   
-  // Replace underscores with spaces
   name = name.replace(/_/g, " ");
   
   return name || wireName;

@@ -9,15 +9,14 @@ ALU::ALU(Wire* X, Wire* Y, Wire* AddSub,
         s(S), Cout(COUT),
 
         yXOR(32), shiftedY(32), xPlusY(32), logic(32), xPlusYMsb(1),
-        AddSub_SE(32), xPlusYMsb_SE(32), funcClass_s0(1), funcClass_s1(1),
+        AddSub_SE(32), funcClass_s0(1), funcClass_s1(1),
 
         se(addSub, AddSub_SE),
         xorGate({y, &AddSub_SE}, yXOR),
         shifter(y, shiftDirection, shiftedY),
         adder(x, &yXOR, addSub, xPlusY, Cout),
-        MSB_SE(&xPlusYMsb, xPlusYMsb_SE),
         lu(x, y, logicFunc, logic),
-        mux(&shiftedY, &xPlusYMsb_SE, &xPlusY, &logic, &funcClass_s1, &funcClass_s0, s)
+        mux(&shiftedY, &xPlusYMsb, &xPlusY, &logic, &funcClass_s1, &funcClass_s0, s)
 {}
 
 void ALU::eval(){
@@ -31,7 +30,6 @@ void ALU::eval(){
 
     xPlusYMsb.set(xPlusY.getBit(31));
     
-    MSB_SE.eval();
     lu.eval();
     mux.eval();
 }
@@ -62,8 +60,8 @@ uint32_t ALU::getWireByPath(const std::string& path) {
     if (path == "yXOR") return yXOR.getValue();
     if (path == "shiftedY") return shiftedY.getValue();
     if (path == "xPlusY") return xPlusY.getValue();
-    if (path == "logic") return shiftedY.getValue();
-    if (path == "xPlusYMsb") return xPlusY.getValue();
+    if (path == "logic") return logic.getValue();
+    if (path == "xPlusYMsb") return xPlusYMsb.getValue();
     
     // OUTPUTS
     if (path == "s") return s.getValue();

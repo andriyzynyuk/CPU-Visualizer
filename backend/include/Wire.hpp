@@ -24,6 +24,7 @@ struct Wire {
     }
 
     void setBit(uint8_t i, bool b) {
+        if (i >= width) return;
         if (b) value |= (1u << i);
         else   value &= ~(1u << i);
     }

@@ -1,0 +1,23 @@
+Fix diagrams
+
+Create a RegFile diagram
+
+Create PC diagram
+
+Implement data cache
+ - sw lw
+
+ Shifter diagram and signals
+  - shifting instructions
+
+Control Unit diagram
+
+Sign Extensions
+
+Code editor text box is kind of broken
+
+binary values
+
+register value menu
+
+text box centering

@@ -2,14 +2,12 @@ import { useEffect, useState } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { WireTooltip, useWireTooltip } from "../cpu/WireTooltip.jsx";
 
-// Wire configuration for Shifter view
 const WIRES = [];
 
 export default function ShifterView({ onBack }) {
   const [svgContent, setSvgContent] = useState(null);
   const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, name: "", value: 0 });
 
-  // Use wire tooltip hook
   useWireTooltip(svgContent, {}, WIRES, setTooltip);
 
   const closeTooltip = () => setTooltip({ ...tooltip, visible: false });
