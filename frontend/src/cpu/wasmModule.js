@@ -24,8 +24,10 @@ export async function initWasm() {
   if (moduleInstance) return moduleInstance;
   if (!loadPromise) {
     loadPromise = (async () => {
-      await injectScriptOnce('/wasm/cpu.js');
-      const m = await window.CPUWasm();
+      await injectScriptOnce(`${import.meta.env.BASE_URL}wasm/cpu.js`);
+      const m = await window.CPUWasm({
+        locateFile: (path) => `${import.meta.env.BASE_URL}wasm/${path}`
+      });
       moduleInstance = m;
       return m;
     })();

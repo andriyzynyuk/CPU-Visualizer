@@ -48,7 +48,7 @@ export default function AdderView({ basePath = "alu.adder", onNavigate, onBack }
   const canGoForward = currentCycle < maxCycles;
 
   useEffect(() => {
-    fetch("/svg/Adder.svg")
+    fetch(`${import.meta.env.BASE_URL}svg/Adder.svg`)
       .then((res) => res.text())
       .then(setSvgContent)
       .catch((err) => console.error("Failed to load Adder.svg", err));

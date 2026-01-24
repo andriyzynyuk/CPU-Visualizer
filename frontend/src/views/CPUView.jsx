@@ -54,7 +54,7 @@ export default function CPUView({ onNavigate }) {
   const canGoForward = currentCycle < maxCycles;
 
   useEffect(() => {
-    fetch("/svg/CPU.svg")
+    fetch(`${import.meta.env.BASE_URL}svg/CPU.svg`)
       .then((res) => res.text())
       .then(setSvgContent)
       .catch((err) => console.error("Failed to load CPU.svg", err));

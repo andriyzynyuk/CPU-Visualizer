@@ -43,7 +43,7 @@ export default function FullAdderView({ bit, basePath = "alu.adder", onBack }) {
   const canGoForward = currentCycle < maxCycles;
 
   useEffect(() => {
-    fetch("/svg/FullAdder.svg")
+    fetch(`${import.meta.env.BASE_URL}svg/FullAdder.svg`)
       .then((res) => res.text())
       .then(setSvgContent)
       .catch((err) => console.error("Failed to load FullAdder.svg", err));

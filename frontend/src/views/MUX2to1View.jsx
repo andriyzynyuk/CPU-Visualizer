@@ -41,7 +41,7 @@ export default function MUX2to1View({ basePath = "", onBack }) {
   const canGoForward = currentCycle < maxCycles;
 
   useEffect(() => {
-    fetch("/svg/MUX2to1.svg")
+    fetch(`${import.meta.env.BASE_URL}svg/MUX2to1.svg`)
       .then((res) => res.text())
       .then(setSvgContent)
       .catch((err) => console.error("Failed to load MUX2to1.svg", err));

@@ -42,10 +42,10 @@ export default function NextAddrView({ onNavigate, onBack }) {
   const canGoForward = currentCycle < maxCycles;
 
   useEffect(() => {
-    fetch("/svg/NextAddr.svg")
+    fetch(`${import.meta.env.BASE_URL}svg/NextAddr.svg`)
       .then((res) => res.text())
       .then(setSvgContent)
-      .catch((err) => console.error("Failed to load NextAddrt.svg", err));
+      .catch((err) => console.error("Failed to load NextAddr.svg", err));
   }, []);
 
   useEffect(() => {

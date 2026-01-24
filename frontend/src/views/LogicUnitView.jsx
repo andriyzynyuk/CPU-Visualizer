@@ -33,7 +33,7 @@ export default function LogicUnitView({ onNavigate, onBack }) {
   const canGoForward = currentCycle < maxCycles;
 
   useEffect(() => {
-    fetch("/svg/LogicUnit.svg")
+    fetch(`${import.meta.env.BASE_URL}svg/LogicUnit.svg`)
       .then((res) => res.text())
       .then(setSvgContent)
       .catch((err) => console.error("Failed to load LogicUnit.svg", err));

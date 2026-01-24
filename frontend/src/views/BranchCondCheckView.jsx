@@ -38,7 +38,7 @@ export default function BranchCondCheckView({ onNavigate, onBack }) {
   const canGoForward = currentCycle < maxCycles;
 
   useEffect(() => {
-    fetch("/svg/BranchCondCheck.svg")
+    fetch(`${import.meta.env.BASE_URL}svg/BranchCondCheck.svg`)
       .then((res) => res.text())
       .then(setSvgContent)
       .catch((err) => console.error("Failed to load BranchCondCheck.svg", err));

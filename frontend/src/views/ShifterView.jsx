@@ -13,7 +13,7 @@ export default function ShifterView({ onBack }) {
   const closeTooltip = () => setTooltip({ ...tooltip, visible: false });
 
   useEffect(() => {
-    fetch("/svg/Shifter.svg")
+    fetch(`${import.meta.env.BASE_URL}svg/Shifter.svg`)
       .then((res) => res.text())
       .then(setSvgContent)
       .catch((err) => console.error("Failed to load Shifter.svg", err));

@@ -39,7 +39,7 @@ export default function ALUView({ onNavigate, onBack }) {
   const canGoForward = currentCycle < maxCycles;
 
   useEffect(() => {
-    fetch("/svg/ALU.svg")
+    fetch(`${import.meta.env.BASE_URL}svg/ALU.svg`)
       .then((res) => res.text())
       .then(setSvgContent)
       .catch((err) => console.error("Failed to load ALU.svg", err));

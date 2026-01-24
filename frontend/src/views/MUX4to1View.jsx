@@ -46,7 +46,7 @@ export default function MUX4to1View({ basePath = "regDstMux", onBack }) {
   const canGoBack = currentCycle > 0;
   const canGoForward = currentCycle < maxCycles;
   useEffect(() => {
-    fetch("/svg/MUX4to1.svg")
+    fetch(`${import.meta.env.BASE_URL}svg/MUX4to1.svg`)
       .then((res) => res.text())
       .then(setSvgContent)
       .catch((err) => console.error("Failed to load MUX4to1.svg", err));
