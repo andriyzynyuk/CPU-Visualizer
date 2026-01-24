@@ -1,0 +1,55 @@
+name: Bug Report
+description: Report a bug or incorrect CPU behavior
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the sections below.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the bug or incorrect behavior.
+      placeholder: The ADD instruction writes to the wrong register when rs == rd.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: The destination register should contain the sum of rs and rt.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Instruction sequence or actions that cause the bug.
+      placeholder: |
+        1. Load program
+        2. Execute ADD r1, r1, r2
+        3. Step CPU
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or recordings (if applicable)
+      description: Drag and drop images here.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Instruction execution
+        - Wire Values
+        - SVG Diagram Issues
+        - Code Editor
+        - Other
