@@ -1,5 +1,5 @@
 # CPU Visualizer & Logic Simulator
-
+https://andriyzynyuk.github.io/CPU-Visualizer/
 An interactive, educational CPU visualization that lets users explore how a simple CPU works 
  - From high-level blocks (ALU, registers, control logic) all the way down to individual logic gates.
 
