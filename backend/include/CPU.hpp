@@ -21,6 +21,7 @@ struct CPU {
     Wire rs; //5 bits
     Wire rt; //5 bits
     Wire rd; //5 bits
+    Wire sh; //5 bits
     Wire returnAddress;
     Wire imm; //16 bits
     Wire imm_se;
@@ -46,6 +47,7 @@ struct CPU {
     Wire regInSrc_s0; //1 bit
     Wire ALUSrc; //1 bit
     Wire addSub; //1bit
+    Wire constVar; //1 bit
     Wire logicFunc; //2 bits
     Wire funcClass; //2 bits
     Wire dataRead; //1 bit unused
@@ -53,7 +55,7 @@ struct CPU {
     Wire BrType; //2 bit
     Wire PCSrc; //2 bit
     Wire SysCallAddr; //30 bits
-    Wire shiftDirection; //1 bit
+    Wire shiftFunc; //2 bits
 
     // Gates
     NextAddr nextAddr;

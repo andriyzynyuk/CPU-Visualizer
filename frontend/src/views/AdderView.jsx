@@ -1,7 +1,8 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { useCpu } from "../cpu/CpuContext.jsx";
 import { WireTooltip, useWireTooltip } from "../cpu/WireTooltip.jsx";
+import { useClickableElements } from "../cpu/useClickableElements.js";
 
 function generateWireDefs() {
   const defs = [];
@@ -109,43 +110,15 @@ export default function AdderView({ basePath = "alu.adder", onNavigate, onBack }
     });
   }, [svgReady, wireValues]);
 
-  useEffect(() => {
-    if (!svgReady) return;
+  const fullAdderClickables = useMemo(() => 
+    Array.from({ length: 32 }, (_, i) => ({
+      id: `FullAdder${i}_Adder`,
+      onClick: () => onNavigate("FullAdder", { bit: i, basePath }),
+    })),
+    [onNavigate, basePath]
+  );
 
-    const fullAdderElements = [];
-    const handlers = [];
-
-    for (let i = 0; i < 32; i++) {
-      const fa = document.getElementById(`FullAdder${i}_Adder`);
-      if (fa) {
-        const handleClick = () => {
-          onNavigate("FullAdder", { bit: i, basePath });
-        };
-        const handleMouseEnter = () => {
-          fa.style.opacity = '0.7';
-        };
-        const handleMouseLeave = () => {
-          fa.style.opacity = '1';
-        };
-
-        fa.addEventListener("click", handleClick);
-        fa.addEventListener("mouseenter", handleMouseEnter);
-        fa.addEventListener("mouseleave", handleMouseLeave);
-        fa.style.cursor = 'pointer';
-
-        fullAdderElements.push(fa);
-        handlers.push({ element: fa, handleClick, handleMouseEnter, handleMouseLeave });
-      }
-    }
-
-    return () => {
-      handlers.forEach(({ element, handleClick, handleMouseEnter, handleMouseLeave }) => {
-        element.removeEventListener("click", handleClick);
-        element.removeEventListener("mouseenter", handleMouseEnter);
-        element.removeEventListener("mouseleave", handleMouseLeave);
-      });
-    };
-  }, [svgReady, onNavigate, basePath]);
+  useClickableElements(svgReady, fullAdderClickables, [onNavigate, basePath]);
 
   return (
       <div className="diagram-container" onClick={closeTooltip}>

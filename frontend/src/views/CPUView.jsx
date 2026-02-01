@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { useCpu } from "../cpu/CpuContext.jsx";
 import { WireTooltip, useWireTooltip } from "../cpu/WireTooltip.jsx";
+import { useClickableElements } from "../cpu/useClickableElements.js";
 
 const WIRES = [
   { id: "WireIncrPC_CPU", path: "IncrPC" },
@@ -14,7 +15,7 @@ const WIRES = [
   { id: "WireRD_CPU", path: "rd" },
   { id: "Wire31_CPU", path: "returnAddress" },
   { id: "WireImm_CPU", path: "imm" },
-  { id: "WireSEout_CPU", path: "imm_se" },
+  { id: "WireImmSE_CPU", path: "imm_se" },
   { id: "WireOP_CPU", path: "op" },
   { id: "WireFN_CPU", path: "fn" },
   { id: "WireMUX0out_CPU", path: "regDstIn" },
@@ -28,11 +29,21 @@ const WIRES = [
   { id: "WireRegDst_CPU", path: "regDst" },
   { id: "WireRegInSrc_CPU", path: "regInSrc" },
   { id: "WireALUSrc_CPU", path: "ALUSrc" },
-  { id: "WireALUFunc_CPU", path: "funcClass" },
+  { id: "WireFuncClass_CPU", path: "funcClass" },
   { id: "WireDataRead_CPU", path: "dataRead" },
   { id: "WireDataWrite_CPU", path: "dataWrite" },
-  { id: "WireBrJump_CPU", path: "PCSrc" }
-  //ADDSUB, LOGICFUNC, BrType, ShiftDirection, sh
+  { id: "WireConstVar_CPU", path: "constVar" }, //
+  { id: "WireShiftFunc_CPU", path: "shiftFunc" },
+  { id: "WireLogicFunc_CPU", path: "logicFunc" },
+  { id: "WirePCSrc_CPU", path: "PCSrc" },
+  { id: "WireBrType_CPU", path: "BrType" },
+  { id: "WireBrType_CPU", path: "BrType" },
+  { id: "WireSH_CPU", path: "sh" },
+  { id: "WireAddSub_CPU", path: "addSub" },
+  { id: "WirePCBR_CPU", path: "PCBR" },
+  { id: "WireCUout_CPU", path: "CUout" },
+  
+  //ADDSUB
 ];
 
 const SVG_WIDTH = 3099;
@@ -115,99 +126,13 @@ export default function CPUView({ onNavigate }) {
     });
   }, [svgReady, wireValues]);
 
-  useEffect(() => {
-    if (!svgReady) return;
-
-    const nextAddr = document.getElementById("NextAddr_CPU");
-    const mux4to10 = document.getElementById("MUX4to10_CPU");
-    const mux2to1 = document.getElementById("MUX2to1_CPU");
-    const alu = document.getElementById("ALU_CPU");
-    const mux4to11 = document.getElementById("MUX4to11_CPU");
-
-    const handleNextAddrClick = () => onNavigate("NextAddr");
-    const handleMUX4to10Click = () => onNavigate("MUX4to1", { basePath: "regDstMux" });
-    const handleMUX4to11Click = () => onNavigate("MUX4to1", { basePath: "regInSrc_MUX" });
-    const handleMUX2to1Click = () => onNavigate("MUX2to1", { basePath: "ALUSrc_MUX" });
-    const handleALUClick = () => onNavigate("ALU");
-
-    const handleNextAddrMouseEnter = () => {
-      if (nextAddr) nextAddr.style.opacity = '0.7';
-    };
-    const handleNextAddrMouseLeave = () => {
-      if (nextAddr) nextAddr.style.opacity = '1';
-    };
-
-    const handleMUX4to10MouseEnter = () => {
-      if (mux4to10) mux4to10.style.opacity = '0.7';
-    };
-    const handleMUX4to10MouseLeave = () => {
-      if (mux4to10) mux4to10.style.opacity = '1';
-    };
-
-    const handleMUX4to11MouseEnter = () => {
-      if (mux4to11) mux4to11.style.opacity = '0.7';
-    };
-    const handleMUX4to11MouseLeave = () => {
-      if (mux4to11) mux4to11.style.opacity = '1';
-    };
-
-    const handleMUX2to1MouseEnter = () => {
-      if (mux2to1) mux2to1.style.opacity = '0.7';
-    };
-    const handleMUX2to1MouseLeave = () => {
-      if (mux2to1) mux2to1.style.opacity = '1';
-    };
-
-    const handleALUMouseEnter = () => {
-      if (alu) alu.style.opacity = '0.7';
-    };
-    const handleALUMouseLeave = () => {
-      if (alu) alu.style.opacity = '1';
-    };
-
-    nextAddr?.addEventListener("click", handleNextAddrClick);
-    nextAddr?.addEventListener("mouseenter", handleNextAddrMouseEnter);
-    nextAddr?.addEventListener("mouseleave", handleNextAddrMouseLeave);
-    if (nextAddr) nextAddr.style.cursor = 'pointer';
-
-    mux4to10?.addEventListener("click", handleMUX4to10Click);
-    mux4to10?.addEventListener("mouseenter", handleMUX4to10MouseEnter);
-    mux4to10?.addEventListener("mouseleave", handleMUX4to10MouseLeave);
-    if (mux4to10) mux4to10.style.cursor = 'pointer';
-
-    mux2to1?.addEventListener("click", handleMUX2to1Click);
-    mux2to1?.addEventListener("mouseenter", handleMUX2to1MouseEnter);
-    mux2to1?.addEventListener("mouseleave", handleMUX2to1MouseLeave);
-    if (mux2to1) mux2to1.style.cursor = 'pointer';
-
-    alu?.addEventListener("click", handleALUClick);
-    alu?.addEventListener("mouseenter", handleALUMouseEnter);
-    alu?.addEventListener("mouseleave", handleALUMouseLeave);
-    if (alu) alu.style.cursor = 'pointer';
-
-    mux4to11?.addEventListener("click", handleMUX4to11Click);
-    mux4to11?.addEventListener("mouseenter", handleMUX4to11MouseEnter);
-    mux4to11?.addEventListener("mouseleave", handleMUX4to11MouseLeave);
-    if (mux4to11) mux4to11.style.cursor = 'pointer';
-
-    return () => {
-      nextAddr?.removeEventListener("click", handleNextAddrClick);
-      nextAddr?.removeEventListener("mouseenter", handleNextAddrMouseEnter);
-      nextAddr?.removeEventListener("mouseleave", handleNextAddrMouseLeave);
-      mux4to10?.removeEventListener("click", handleMUX4to10Click);
-      mux4to10?.removeEventListener("mouseenter", handleMUX4to10MouseEnter);
-      mux4to10?.removeEventListener("mouseleave", handleMUX4to10MouseLeave);
-      mux2to1?.removeEventListener("click", handleMUX2to1Click);
-      mux2to1?.removeEventListener("mouseenter", handleMUX2to1MouseEnter);
-      mux2to1?.removeEventListener("mouseleave", handleMUX2to1MouseLeave);
-      alu?.removeEventListener("click", handleALUClick);
-      alu?.removeEventListener("mouseenter", handleALUMouseEnter);
-      alu?.removeEventListener("mouseleave", handleALUMouseLeave);
-      mux4to11?.removeEventListener("click", handleMUX4to11Click);
-      mux4to11?.removeEventListener("mouseenter", handleMUX4to11MouseEnter);
-      mux4to11?.removeEventListener("mouseleave", handleMUX4to11MouseLeave);
-    };
-  }, [svgReady, onNavigate]);
+  useClickableElements(svgReady, [
+    { id: "NextAddr_CPU", onClick: () => onNavigate("NextAddr") },
+    { id: "MUX4to10_CPU", onClick: () => onNavigate("MUX4to1", { basePath: "regDstMux" }) },
+    { id: "MUX2to1_CPU", onClick: () => onNavigate("MUX2to1", { basePath: "ALUSrc_MUX" }) },
+    { id: "ALU_CPU", onClick: () => onNavigate("ALU") },
+    { id: "MUX4to11_CPU", onClick: () => onNavigate("MUX4to1", { basePath: "regInSrc_MUX" }) },
+  ], [onNavigate]);
 
   return (
     <div className="diagram-container" onClick={closeTooltip}>

@@ -12,6 +12,8 @@ TEST(ControlUnitTest, ADDIInstruction) {
     Wire RegInSrc(2);
     Wire ALUSrc(1);
     Wire AddSub(1);
+    Wire ConstVar(1);
+    Wire ShiftFunc(2);
     Wire LogicFunc(2);
     Wire FuncClass(2);
     Wire DataRead(1);
@@ -20,7 +22,7 @@ TEST(ControlUnitTest, ADDIInstruction) {
     Wire PCSrc(2);
 
     ControlUnit cu(&OP, &FN, RegWrite, RegDst, RegInSrc, ALUSrc,
-                   AddSub, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
+                   AddSub, ConstVar, ShiftFunc, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
 
     // Test ADDI (0b001000)
     OP.set(0b001000);
@@ -47,6 +49,8 @@ TEST(ControlUnitTest, SLTIInstruction) {
     Wire RegInSrc(2);
     Wire ALUSrc(1);
     Wire AddSub(1);
+    Wire ConstVar(1);
+    Wire ShiftFunc(2);
     Wire LogicFunc(2);
     Wire FuncClass(2);
     Wire DataRead(1);
@@ -55,7 +59,7 @@ TEST(ControlUnitTest, SLTIInstruction) {
     Wire PCSrc(2);
 
     ControlUnit cu(&OP, &FN, RegWrite, RegDst, RegInSrc, ALUSrc,
-                   AddSub, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
+                   AddSub, ConstVar, ShiftFunc, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
 
     // Test SLTI (0b001010)
     OP.set(0b001010);
@@ -82,6 +86,8 @@ TEST(ControlUnitTest, ANDIInstruction) {
     Wire RegInSrc(2);
     Wire ALUSrc(1);
     Wire AddSub(1);
+    Wire ConstVar(1);
+    Wire ShiftFunc(2);
     Wire LogicFunc(2);
     Wire FuncClass(2);
     Wire DataRead(1);
@@ -90,7 +96,7 @@ TEST(ControlUnitTest, ANDIInstruction) {
     Wire PCSrc(2);
 
     ControlUnit cu(&OP, &FN, RegWrite, RegDst, RegInSrc, ALUSrc,
-                   AddSub, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
+                   AddSub, ConstVar, ShiftFunc, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
 
     // Test ANDI (0b001100)
     OP.set(0b001100);
@@ -117,6 +123,8 @@ TEST(ControlUnitTest, ORIInstruction) {
     Wire RegInSrc(2);
     Wire ALUSrc(1);
     Wire AddSub(1);
+    Wire ConstVar(1);
+    Wire ShiftFunc(2);
     Wire LogicFunc(2);
     Wire FuncClass(2);
     Wire DataRead(1);
@@ -125,7 +133,7 @@ TEST(ControlUnitTest, ORIInstruction) {
     Wire PCSrc(2);
 
     ControlUnit cu(&OP, &FN, RegWrite, RegDst, RegInSrc, ALUSrc,
-                   AddSub, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
+                   AddSub, ConstVar, ShiftFunc, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
 
     // Test ORI (0b001101)
     OP.set(0b001101);
@@ -148,6 +156,8 @@ TEST(ControlUnitTest, JUMPInstruction) {
     Wire RegInSrc(2);
     Wire ALUSrc(1);
     Wire AddSub(1);
+    Wire ConstVar(1);
+    Wire ShiftFunc(2);
     Wire LogicFunc(2);
     Wire FuncClass(2);
     Wire DataRead(1);
@@ -156,7 +166,7 @@ TEST(ControlUnitTest, JUMPInstruction) {
     Wire PCSrc(2);
 
     ControlUnit cu(&OP, &FN, RegWrite, RegDst, RegInSrc, ALUSrc,
-                   AddSub, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
+                   AddSub, ConstVar, ShiftFunc, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
 
     // Test JUMP (0b000010)
     OP.set(0b000010);
@@ -177,6 +187,8 @@ TEST(ControlUnitTest, BEQInstruction) {
     Wire RegInSrc(2);
     Wire ALUSrc(1);
     Wire AddSub(1);
+    Wire ConstVar(1);
+    Wire ShiftFunc(2);
     Wire LogicFunc(2);
     Wire FuncClass(2);
     Wire DataRead(1);
@@ -185,7 +197,7 @@ TEST(ControlUnitTest, BEQInstruction) {
     Wire PCSrc(2);
 
     ControlUnit cu(&OP, &FN, RegWrite, RegDst, RegInSrc, ALUSrc,
-                   AddSub, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
+                   AddSub, ConstVar, ShiftFunc, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
 
     // Test BEQ (0b000100)
     OP.set(0b000100);
@@ -207,6 +219,8 @@ TEST(ControlUnitTest, ADDInstruction) {
     Wire RegInSrc(2);
     Wire ALUSrc(1);
     Wire AddSub(1);
+    Wire ConstVar(1);
+    Wire ShiftFunc(2);
     Wire LogicFunc(2);
     Wire FuncClass(2);
     Wire DataRead(1);
@@ -215,7 +229,7 @@ TEST(ControlUnitTest, ADDInstruction) {
     Wire PCSrc(2);
 
     ControlUnit cu(&OP, &FN, RegWrite, RegDst, RegInSrc, ALUSrc,
-                   AddSub, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
+                   AddSub, ConstVar, ShiftFunc, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
 
     // Test ADD (R-type with FN = 0b100000)
     OP.set(0b000000);
@@ -238,6 +252,8 @@ TEST(ControlUnitTest, SUBInstruction) {
     Wire RegInSrc(2);
     Wire ALUSrc(1);
     Wire AddSub(1);
+    Wire ConstVar(1);
+    Wire ShiftFunc(2);
     Wire LogicFunc(2);
     Wire FuncClass(2);
     Wire DataRead(1);
@@ -246,7 +262,7 @@ TEST(ControlUnitTest, SUBInstruction) {
     Wire PCSrc(2);
 
     ControlUnit cu(&OP, &FN, RegWrite, RegDst, RegInSrc, ALUSrc,
-                   AddSub, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
+                   AddSub, ConstVar, ShiftFunc, LogicFunc, FuncClass, DataRead, DataWrite, BrType, PCSrc);
 
     // Test SUB (R-type with FN = 0b100010)
     OP.set(0b000000);

@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { useCpu } from "../cpu/CpuContext.jsx";
 import { WireTooltip, useWireTooltip } from "../cpu/WireTooltip.jsx";
+import { useClickableElements } from "../cpu/useClickableElements.js";
 
 const WIRES = [
   { id: "WireX_LU", path: "alu.lu.x" },
@@ -94,31 +95,9 @@ export default function LogicUnitView({ onNavigate, onBack }) {
     });
   }, [svgReady, wireValues]);
 
-  useEffect(() => {
-    if (!svgReady) return;
-
-    const mux4to1 = document.getElementById("MUX4to1_LU");
-
-    const handleMUX4to1Click = () => onNavigate("MUX4to1", { basePath: "alu.lu.mux4to1" });
-
-    const handleMUX4to1MouseEnter = () => {
-      if (mux4to1) mux4to1.style.opacity = '0.7';
-    };
-    const handleMUX4to1MouseLeave = () => {
-      if (mux4to1) mux4to1.style.opacity = '1';
-    };
-
-    mux4to1?.addEventListener("click", handleMUX4to1Click);
-    mux4to1?.addEventListener("mouseenter", handleMUX4to1MouseEnter);
-    mux4to1?.addEventListener("mouseleave", handleMUX4to1MouseLeave);
-    if (mux4to1) mux4to1.style.cursor = 'pointer';
-
-    return () => {
-      mux4to1?.removeEventListener("click", handleMUX4to1Click);
-      mux4to1?.removeEventListener("mouseenter", handleMUX4to1MouseEnter);
-      mux4to1?.removeEventListener("mouseleave", handleMUX4to1MouseLeave);
-    };
-  }, [svgReady, onNavigate]);
+  useClickableElements(svgReady, [
+    { id: "MUX4to1_LU", onClick: () => onNavigate("MUX4to1", { basePath: "alu.lu.mux4to1" }) },
+  ], [onNavigate]);
 
   return (
     <div className="diagram-container" onClick={closeTooltip}>

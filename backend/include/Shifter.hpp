@@ -8,12 +8,13 @@
 struct Shifter : Component {
     // Inputs
     Wire* y;
-    Wire* direction;
+    Wire* amount;
+    Wire* func;
 
     // Output
     Wire &s;
 
-    Shifter(Wire* Y, Wire* Direction, Wire& S);
+    Shifter(Wire* Y, Wire* Amount, Wire* Func, Wire& S);
     void eval() override;
     //uint32_t getWireByPath(const std::string& path);
 };

@@ -7,7 +7,7 @@ const WIRE_DEFS = [
     { id: "WireI0_MUX2to1", relPath: "input0" },
     { id: "WireI1_MUX2to1", relPath: "input1" },
     { id: "WireS0_MUX2to1", relPath: "s0" },
-    { id: "WireS0Not_MUX2to1", relPath: "s0n" },
+    { id: "WireS0not_MUX2to1", relPath: "s0n" },
     { id: "WireAND0_MUX2to1", relPath: "ANDWire0" },
     { id: "WireAND1_MUX2to1", relPath: "ANDWire1" },
     { id: "WireOut_MUX2to1", relPath: "out" }

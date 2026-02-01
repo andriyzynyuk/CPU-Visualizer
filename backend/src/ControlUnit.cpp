@@ -2,11 +2,12 @@
 
 ControlUnit::ControlUnit(Wire* OP, Wire* FN, 
                     Wire& RegWrite, Wire& RegDst, Wire& RegInSrc, Wire& ALUSRC,
-                    Wire& AddSub, Wire& LogicFunc, Wire& FuncClass, Wire& DataRead,
-                    Wire& DataWrite, Wire& BRType, Wire& PCSRC)
+                    Wire& AddSub, Wire& ConstVar, Wire& ShiftFunc, Wire& LogicFunc,
+                    Wire& FuncClass, Wire& DataRead, Wire& DataWrite, Wire& BRType,
+                    Wire& PCSRC)
     : op(OP), fn(FN), regWrite(RegWrite), regDst(RegDst), regInSrc(RegInSrc), ALUSrc(ALUSRC),
-        addSub(AddSub), logicFunc(LogicFunc), funcClass(FuncClass), dataRead(DataRead),
-        dataWrite(DataWrite), BrType(BRType), PCSrc(PCSRC)
+        addSub(AddSub), constVar(ConstVar), shiftFunc(ShiftFunc), logicFunc(LogicFunc),
+        funcClass(FuncClass),dataRead(DataRead), dataWrite(DataWrite), BrType(BRType), PCSrc(PCSRC)
 {}
 
 
@@ -243,6 +244,96 @@ void ControlUnit::eval(){
 
                 PCSrc.set(0b10);
                 break;
+            //SLL
+            case 0b000000:
+                regWrite.set(0b1);
+                regDst.set(0b01);
+                regInSrc.set(0b01);
+                ALUSrc.set(0b0);
+                constVar.set(0b0);
+                shiftFunc.set(0b01);
+
+                funcClass.set(0b00);
+                dataRead.set(0b0);
+                dataWrite.set(0b0);
+                BrType.set(0b00);
+                PCSrc.set(0b00);
+                break;
+            //SRL
+            case 0b000010:
+                regWrite.set(0b1);
+                regDst.set(0b01);
+                regInSrc.set(0b01);
+                ALUSrc.set(0b0);
+                constVar.set(0b0);
+                shiftFunc.set(0b10);
+
+                funcClass.set(0b00);
+                dataRead.set(0b0);
+                dataWrite.set(0b0);
+                BrType.set(0b00);
+                PCSrc.set(0b00);
+                break;
+            //SRA
+            case 0b000011:
+                regWrite.set(0b1);
+                regDst.set(0b01);
+                regInSrc.set(0b01);
+                ALUSrc.set(0b0);
+                constVar.set(0b0);
+                shiftFunc.set(0b11);
+
+                funcClass.set(0b00);
+                dataRead.set(0b0);
+                dataWrite.set(0b0);
+                BrType.set(0b00);
+                PCSrc.set(0b00);
+                break;
+            //SLLV
+            case 0b000100:
+                regWrite.set(0b1);
+                regDst.set(0b01);
+                regInSrc.set(0b01);
+                ALUSrc.set(0b0);
+                constVar.set(0b1);
+                shiftFunc.set(0b01);
+
+                funcClass.set(0b00);
+                dataRead.set(0b0);
+                dataWrite.set(0b0);
+                BrType.set(0b00);
+                PCSrc.set(0b00);
+                break;
+            //SRLV
+            case 0b000110:
+                regWrite.set(0b1);
+                regDst.set(0b01);
+                regInSrc.set(0b01);
+                ALUSrc.set(0b0);
+                constVar.set(0b1);
+                shiftFunc.set(0b10);
+
+                funcClass.set(0b00);
+                dataRead.set(0b0);
+                dataWrite.set(0b0);
+                BrType.set(0b00);
+                PCSrc.set(0b00);
+                break;
+            //SRAV
+            case 0b000111:
+                regWrite.set(0b1);
+                regDst.set(0b01);
+                regInSrc.set(0b01);
+                ALUSrc.set(0b0);
+                constVar.set(0b1);
+                shiftFunc.set(0b11);
+
+                funcClass.set(0b00);
+                dataRead.set(0b0);
+                dataWrite.set(0b0);
+                BrType.set(0b00);
+                PCSrc.set(0b00);
+                break;
         }
     }
 }
@@ -252,6 +343,8 @@ void ControlUnit::eval(){
 // regDst.set(0b00);
 // regInSrc.set(0b01);
 // ALUSrc.set(0b1);
+// constVar.set(0b1);
+// shiftFunc.set(0b11);
 // addSub.set(0b0);
 // logicFunc.set(0b00);
 // funcClass.set(0b10);
@@ -261,6 +354,5 @@ void ControlUnit::eval(){
 // PCSrc.set(0b00);
 
 //TODO:
-//lui
 //lw, sw
 //syscall?

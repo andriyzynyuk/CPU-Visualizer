@@ -33,7 +33,10 @@ export function CpuProvider({ children }) {
         setCurrentInstructionText(null);
         setHasFinished(true);
       } else {
-        const text = instructionTextsRef.current[pc];
+        let text = instructionTextsRef.current[pc];
+        if (text) {
+          text = text.split('#')[0].split('//')[0].trim();
+        }
         setCurrentInstructionText(text || null);
         setHasFinished(false);
       }

@@ -9,8 +9,7 @@ Items are listed in no particular order and may be implemented incrementally ove
 ---
 
 ### Fix Logic Diagrams
-- Correct existing logic diagram issues (e.g., `BrTrue` wire clipping the Branch Condition Checker)
-- Add missing control signals such as `BrType`, `ShiftAmount`, and others
+- Correct existing logic diagram issues
 
 ---
 
@@ -34,8 +33,6 @@ Items are listed in no particular order and may be implemented incrementally ove
 
 ### Shifter Diagram and Signals
 - Create a shifter diagram within the ALU
-- Add shift instructions
-- Add required control signals for shifting operations
 
 ---
 

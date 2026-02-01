@@ -116,4 +116,29 @@ extern "C" {
         return Instruction::JAL(jta).raw;
     }
 
+    // === Shift Instructions ===
+    uint32_t instr_SLL(uint8_t rd, uint8_t rt, uint8_t sh) {
+        return Instruction::SLL(rd, rt, sh).raw;
+    }
+
+    uint32_t instr_SRL(uint8_t rd, uint8_t rt, uint8_t sh) {
+        return Instruction::SRL(rd, rt, sh).raw;
+    }
+
+    uint32_t instr_SRA(uint8_t rd, uint8_t rt, uint8_t sh) {
+        return Instruction::SRA(rd, rt, sh).raw;
+    }
+
+    uint32_t instr_SLLV(uint8_t rd, uint8_t rt, uint8_t rs) {
+        return Instruction::SLLV(rd, rt, rs).raw;
+    }
+
+    uint32_t instr_SRLV(uint8_t rd, uint8_t rt, uint8_t rs) {
+        return Instruction::SRLV(rd, rt, rs).raw;
+    }
+
+    uint32_t instr_SRAV(uint8_t rd, uint8_t rt, uint8_t rs) {
+        return Instruction::SRAV(rd, rt, rs).raw;
+    }
+
 }

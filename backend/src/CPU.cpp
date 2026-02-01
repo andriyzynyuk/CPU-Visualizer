@@ -3,18 +3,18 @@
 CPU::CPU()
 
     : IncrPC(30), NextPC(30), PC_out(30), Instr(32), jta(26),
-        rs(5), rt(5), rd(5), returnAddress(32), imm(16), imm_se(32), op(6), fn(6), regDstIn(5),
+        rs(5), rt(5), rd(5), sh(5), returnAddress(32), imm(16), imm_se(32), op(6), fn(6), regDstIn(5),
         rs_out(32), rt_out(32), ALUSrcMux_out(32), Ovfl(1), ALU_out(32), RegIn(32), muxFake(32),
-        regWrite(1), regDst(2), regInSrc(2), ALUSrc(1), addSub(1), logicFunc(2), funcClass(2),
-        dataRead(1), dataWrite(1), BrType(2), PCSrc(2), SysCallAddr(30), shiftDirection(1),
-        regDst_s1(1), regDst_s0(1), regInSrc_s1(1), regInSrc_s0(1),
+        regWrite(1), regDst(2), regInSrc(2), ALUSrc(1), addSub(1), constVar(1),
+        logicFunc(2), funcClass(2), dataRead(1), dataWrite(1), BrType(2), PCSrc(2), SysCallAddr(30),
+        shiftFunc(2), regDst_s1(1), regDst_s0(1), regInSrc_s1(1), regInSrc_s0(1),
 
         pc(&NextPC, PC_out),
         instrCache(&PC_out, Instr),
         controlUnit(&op, &fn,
                     regWrite, regDst, regInSrc, ALUSrc,
-                    addSub, logicFunc, funcClass, dataRead,
-                    dataWrite, BrType, PCSrc),
+                    addSub, constVar, shiftFunc, logicFunc,
+                    funcClass, dataRead, dataWrite, BrType, PCSrc),
         regDstMux(&rt, &rd, &returnAddress, &muxFake,
                     &regDst_s1, &regDst_s0, regDstIn),
         regFile(&rs, &rt, &regDstIn, &RegIn, &regWrite,
@@ -25,7 +25,8 @@ CPU::CPU()
         signExtender(&imm, imm_se),
         ALUSrc_MUX(&rt_out, &imm_se, &ALUSrc, ALUSrcMux_out),
         alu(&rs_out, &ALUSrcMux_out, &addSub,
-            &shiftDirection, &logicFunc,
+            &sh, &constVar,
+            &shiftFunc, &logicFunc,
             &funcClass, ALU_out, Ovfl),
         regInSrc_MUX(&muxFake, &ALU_out, &IncrPC, &muxFake,
                     &regInSrc_s1, &regInSrc_s0, RegIn)
@@ -46,6 +47,7 @@ void CPU::firstCycle() {
 
     rt.set(instrCache.getCurrentInstruction().rt());
     rd.set(instrCache.getCurrentInstruction().rd());
+    sh.set(instrCache.getCurrentInstruction().sh());
     returnAddress.set(31);
     muxFake.set(0);
     regDst_s1.set(regDst.getBit(1));
@@ -64,7 +66,6 @@ void CPU::firstCycle() {
 
     ALUSrc_MUX.eval();
 
-    shiftDirection.set(0);
     alu.eval();
 
     regInSrc_s1.set(regInSrc.getBit(1));
@@ -84,6 +85,7 @@ void CPU::executeCycle() {
 
     rt.set(instrCache.getCurrentInstruction().rt());
     rd.set(instrCache.getCurrentInstruction().rd());
+    sh.set(instrCache.getCurrentInstruction().sh());
     returnAddress.set(31);
     muxFake.set(0);
     regDst_s1.set(regDst.getBit(1));
@@ -102,7 +104,6 @@ void CPU::executeCycle() {
 
     ALUSrc_MUX.eval();
 
-    shiftDirection.set(0);
     alu.eval();
 
     regInSrc_s1.set(regInSrc.getBit(1));
@@ -141,6 +142,7 @@ uint32_t CPU::getWireByPath(const std::string& path) {
     if (path == "rs") return rs.getValue();
     if (path == "rt") return rt.getValue();
     if (path == "rd") return rd.getValue();
+    if (path == "sh") return sh.getValue();
     if (path == "returnAddress") return returnAddress.getValue();
     if (path == "imm") return imm.getValue();
     if (path == "imm_se") return imm_se.getValue();
@@ -165,7 +167,29 @@ uint32_t CPU::getWireByPath(const std::string& path) {
     if (path == "BrType") return BrType.getValue();
     if (path == "PCSrc") return PCSrc.getValue();
     if (path == "SysCallAddr") return SysCallAddr.getValue();
-    if (path == "shiftDirection") return shiftDirection.getValue();
+    if (path == "shiftFunc") return shiftFunc.getValue();
+    if (path == "constVar") return constVar.getValue();
+
+    if (path == "PCBR") {
+        return (PCSrc.getValue() << 2) | BrType.getValue();
+    }
+    if (path == "CUout") {
+        uint32_t pcbr = (PCSrc.getValue() << 2) | BrType.getValue();
+        uint32_t result = 0;
+        result = (result << 4) | pcbr;
+        result = (result << 2) | regDst.getValue();
+        result = (result << 1) | regWrite.getValue();
+        result = (result << 1) | ALUSrc.getValue();
+        result = (result << 1) | addSub.getValue();
+        result = (result << 1) | constVar.getValue();
+        result = (result << 2) | shiftFunc.getValue();
+        result = (result << 2) | logicFunc.getValue();
+        result = (result << 2) | funcClass.getValue();
+        result = (result << 1) | dataRead.getValue();
+        result = (result << 1) | dataWrite.getValue();
+        result = (result << 2) | regInSrc.getValue();
+        return result;
+    }
 
     return -1;
 }

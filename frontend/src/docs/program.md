@@ -85,6 +85,21 @@ These instructions are unique to **CPU Visualizer**.
 | `JR`       | Jump to address stored in register           | `jr rs`       |
 | `JAL`      | Jump to label and save return address        | `jal label`   |
 
+---
+
+## Shifting Instructions
+
+| Instruction | Description                                 | Format           |
+|------------|----------------------------------------------|------------------|
+| `SLL`      | Shift Left Logical                           | `sll rd, rt, sh` |
+| `SRL`      | Shift Right Logical                          | `srl rd, rt, sh` |
+| `SRA`      | Shift Right Arithmetic                       | `sra rd, rt, sh` |
+| `SLLV`     | Shift Left Logical Variable                  | `sllv rd, rt, rs`|
+| `SRLV`     | Shift Right Lorigcal Variable                | `srlv rd, rt, rs`|
+| `SRAV`     | Shift Right Arithmetic Variable              | `srav rd, rt, rs`|
+
+---
+
 ## In-Depth
 
 Here you will find detailed information about each Instruction available to use.
@@ -92,128 +107,272 @@ Here you will find detailed information about each Instruction available to use.
 ## System Instructions
 
 **Finish**
-The `finish` instruction is required to be written at least once, and marks where program execution ends.
-example:
+
+The `finish` instruction marks where program execution ends. It must be written at least once in your program.
+
+Example:
+
 `finish`
- - meaning: When Program Counters gets to 'finish', program execution will end
+
+- Meaning: When the Program Counter reaches 'finish', program execution will end.
 
 **Output**
-The `output` instruction displays the value of a specified register. This instructions has no influence on the CPU, and is solely used for convenience.
-example:
+
+The `output` instruction displays the value of a specified register. This instruction has no influence on the CPU and is solely used for convenience.
+
+Example:
+
 `output(26)`
- - meaning: Displays the value of register 26
+
+- Meaning: Displays the value of register 26.
 
 ## R-Type Instructions
 
 **ADD**
-The `add` instruction adds values of registers rs and rt, and stores the result in register rd
-example:
+
+The `add` instruction adds the values of registers rs and rt, and stores the result in register rd.
+
+Example:
+
 `add 2, 0, 1`
- - meaning: add values of register 0, 1, store result in register 2
+
+- Meaning: Add the values of registers 0 and 1, then store the result in register 2.
 
 **SUB**
-The `sub` instruction subtracts values of registers rs and rt, and stores the result in register rd
-example:
+
+The `sub` instruction subtracts the value of register rt from register rs, and stores the result in register rd.
+
+Example:
+
 `sub 2, 0, 1`
- - meaning: subtract values of register 0, 1, store result in register 2. Note that value of reg 1 is subtracted from value of reg 0
+
+- Meaning: Subtract the value of register 1 from register 0, then store the result in register 2.
 
 **SLT**
-The `slt` instruction checks if the value of register rs is less than the value of register rt. If true, register rd is set to 1, else set to 0
-example:
+
+The `slt` instruction checks if the value of register rs is less than the value of register rt. If true, register rd is set to 1; otherwise, it is set to 0.
+
+Example:
+
 `slt 2, 0, 1`
- - meaning: if value of register 0 is less than that of register 1, set register 2 to value 1, else set register 2 to value 0.
+
+- Meaning: If the value of register 0 is less than register 1, set register 2 to 1; otherwise, set it to 0.
 
 **AND**
-The `and` instruction performs the bitwise AND operation on values in register rs and rt. The result is stored in register rd.
-example:
+
+The `and` instruction performs a bitwise AND operation on the values in registers rs and rt. The result is stored in register rd.
+
+Example:
+
 `and 2, 0, 1`
- - meaning: Register 0 AND Register 1. Store result in Register 2 
+
+- Meaning: Perform a bitwise AND on registers 0 and 1, then store the result in register 2.
 
 **OR**
-The `or` instruction performs the bitwise OR operation on values in register rs and rt. The result is stored in register rd.
-example:
+
+The `or` instruction performs a bitwise OR operation on the values in registers rs and rt. The result is stored in register rd.
+
+Example:
+
 `or 2, 0, 1`
- - meaning: Register 0 OR Register 1. Store result in Register 2 
+
+- Meaning: Perform a bitwise OR on registers 0 and 1, then store the result in register 2.
 
 **XOR**
-The `xor` instruction performs the bitwise XOR operation on values in register rs and rt. The result is stored in register rd.
-example:
+
+The `xor` instruction performs a bitwise XOR operation on the values in registers rs and rt. The result is stored in register rd.
+
+Example:
+
 `xor 2, 0, 1`
- - meaning: Register 0 XOR Register 1. Store result in Register 2
+
+- Meaning: Perform a bitwise XOR on registers 0 and 1, then store the result in register 2.
 
 **NOR**
-The `nor` instruction performs the bitwise NOR operation on values in register rs and rt. The result is stored in register rd.
-example:
+
+The `nor` instruction performs a bitwise NOR operation on the values in registers rs and rt. The result is stored in register rd.
+
+Example:
+
 `nor 2, 0, 1`
- - meaning: Register 0 NOR Register 1. Store result in Register 2 
+
+- Meaning: Perform a bitwise NOR on registers 0 and 1, then store the result in register 2. 
 
 ## I-Type Instructions
+
 **ADDI**
-The `addi` instruction adds values of register rs and imm, and stores the result in register rt
-example:
+
+The `addi` instruction adds the value of register rs and the immediate value imm, then stores the result in register rt.
+
+Example:
+
 `addi 2, 0, 52`
- - meaning: add values of register 0, and immediate value 52, store result in register 2
+
+- Meaning: Add register 0 and the immediate value 52, then store the result in register 2.
 
 **SLTI**
-The `slti` instruction checks if the value of register rs is less than the value imm. If true, register rt is set to 1, else set to 0
-example:
+
+The `slti` instruction checks if the value of register rs is less than the immediate value imm. If true, register rt is set to 1; otherwise, it is set to 0.
+
+Example:
+
 `slti 2, 0, 10`
- - meaning: if value of register 0 is less than 10, set register 2 to value 1, else set register 2 to value 0.
+
+- Meaning: If the value of register 0 is less than 10, set register 2 to 1; otherwise, set it to 0.
 
 **ANDI**
-The `andi` instruction performs the bitwise AND operation on value in register rs and imm. The result is stored in register rt.
-example:
+
+The `andi` instruction performs a bitwise AND operation on the value in register rs and the immediate value imm. The result is stored in register rt.
+
+Example:
+
 `andi 2, 0, 36`
- - meaning: Register 0 AND value 36. Store result in Register 2 
+
+- Meaning: Perform a bitwise AND on register 0 and the value 36, then store the result in register 2.
 
 **ORI**
-The `ori` instruction performs the bitwise OR operation on value in register rs and imm. The result is stored in register rt.
-example:
+
+The `ori` instruction performs a bitwise OR operation on the value in register rs and the immediate value imm. The result is stored in register rt.
+
+Example:
+
 `ori 2, 0, 36`
- - meaning: Register 0 OR value 36. Store result in Register 2 
+
+- Meaning: Perform a bitwise OR on register 0 and the value 36, then store the result in register 2.
 
 **XORI**
-The `xori` instruction performs the bitwise XOR operation on value in register rs and imm. The result is stored in register rt.
-example:
+
+The `xori` instruction performs a bitwise XOR operation on the value in register rs and the immediate value imm. The result is stored in register rt.
+
+Example:
+
 `xori 2, 0, 36`
- - meaning: Register 0 XOR value 36. Store result in Register 2 
+
+- Meaning: Perform a bitwise XOR on register 0 and the value 36, then store the result in register 2. 
 
 ## Branch Instructions
 
 **BRANCH LESS THAN 0**
-The `bltz` instruction checks if value of register rs is less than 0. If true, jump to label
-example:
+
+The `bltz` instruction checks if the value of register rs is less than 0. If true, the program jumps to the specified label.
+
+Example:
+
 `bltz 1, exit`
- - meaning: If value of register 1 is less than 0, jump to 'exit', do nothing otherwise.
+
+- Meaning: If the value of register 1 is less than 0, jump to the 'exit' label; otherwise, continue.
 
 **BRANCH EQUAL**
-The `beq` instruction checks if values of registers rs and rt are equal. If true, jump to label
-example:
+
+The `beq` instruction checks if the values of registers rs and rt are equal. If true, the program jumps to the specified label.
+
+Example:
+
 `beq 1, 2, exit`
- - meaning: If values of registers 1 and 2 are equal, jump to 'exit', do nothing otherwise
+
+- Meaning: If the values of registers 1 and 2 are equal, jump to the 'exit' label; otherwise, continue.
 
 **BRANCH NOT EQUAL**
-The `bne` instruction checks if values of registers rs and rt are not equal. If true, jump to label
-example:
+
+The `bne` instruction checks if the values of registers rs and rt are not equal. If true, the program jumps to the specified label.
+
+Example:
+
 `bne 1, 2, exit`
- - meaning: If values of registers 1 and 2 are not equal, jump to 'exit', do nothing otherwise
+
+- Meaning: If the values of registers 1 and 2 are not equal, jump to the 'exit' label; otherwise, continue.
 
 ## Jump Instructions
 
 **JUMP**
-The `j` instruction jumps to specified label
-example:
+
+The `j` instruction jumps to the specified label.
+
+Example:
+
 `j exit`
- - meaning: jump to label 'exit'
+
+- Meaning: Jump to the 'exit' label.
 
 **JUMP REGISTER**
-The `jr` instruction jumps to value in register rs. In other words, Program Counter becomes the value from rs
-example:
-`j 3`
- - meaning: jump to value of register 3
+
+The `jr` instruction jumps to the address stored in register rs. In other words, the Program Counter becomes the value from rs.
+
+Example:
+
+`jr 3`
+
+- Meaning: Jump to the address stored in register 3.
 
 **JUMP AND LINK**
-The `jal` instruction jumps to specified label, and saves PC+1 in register 31
-example:
-`j exit`
- - meaning: jump to label 'exit', store value of PC+1 in register 31
+
+The `jal` instruction jumps to the specified label and saves the return address (PC+4) in register 31.
+
+Example:
+
+`jal exit`
+
+- Meaning: Jump to the 'exit' label and store the return address in register 31.
+
+
+## Shift Instructions
+
+**Shift Left Logical**
+
+The `sll` instruction shifts the value of register rt to the left by sh positions, storing the result in register rd.
+
+Example:
+
+`sll 1, 0, 1`
+
+- Meaning: Shift register 0 left by 1 position. If register 0 = 1110, result = 11100.
+
+**Shift Right Logical**
+
+The `srl` instruction shifts the value of register rt to the right by sh positions, storing the result in register rd.
+
+Example:
+
+`srl 1, 0, 1`
+
+- Meaning: Shift register 0 right by 1 position. If register 0 = 1110, result = 111.
+
+**Shift Right Arithmetic**
+
+The `sra` instruction shifts the value of register rt to the right by sh positions, storing the result in register rd. Arithmetic shifting preserves the sign of the original value.
+
+Example:
+
+`sra 1, 0, 1`
+
+- Meaning: Shift register 0 right by 1 position. If register 0 = -6, result = -3.
+
+**Shift Left Logical Variable**
+
+The `sllv` instruction shifts the value of register rt to the left. The shift amount is determined by the lower 5 bits of register rs. The result is stored in register rd.
+
+Example:
+
+`sllv 1, 0, 3`
+
+- Meaning: Shift register 0 left by the amount specified in the lower 5 bits of register 3.
+
+**Shift Right Logical Variable**
+
+The `srlv` instruction shifts the value of register rt to the right. The shift amount is determined by the lower 5 bits of register rs. The result is stored in register rd.
+
+Example:
+
+`srlv 1, 0, 3`
+
+- Meaning: Shift register 0 right by the amount specified in the lower 5 bits of register 3.
+
+**Shift Right Arithmetic Variable**
+
+The `srav` instruction shifts the value of register rt to the right. The shift amount is determined by the lower 5 bits of register rs. The result is stored in register rd. Arithmetic shifting preserves the sign of the original value.
+
+Example:
+
+`srav 1, 0, 3`
+
+- Meaning: Shift register 0 right by the amount specified in the lower 5 bits of register 3.

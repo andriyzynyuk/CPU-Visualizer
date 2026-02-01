@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { useCpu } from "../cpu/CpuContext.jsx";
 import { WireTooltip, useWireTooltip } from "../cpu/WireTooltip.jsx";
+import { useClickableElements } from "../cpu/useClickableElements.js";
 
 const WIRES = [
   { id: "Wire(RT)_NextAddr", path: "nextAddr.rt" },
@@ -14,12 +15,13 @@ const WIRES = [
   { id: "Wire(RS)30MSB_NextAddr", path: "nextAddr.rs30MSB" },
   { id: "WireBrTrue_NextAddr", path: "nextAddr.BrTrue" },
   { id: "WireImm_NextAddr", path: "nextAddr.imm" },
-  { id: "WireSEout_NextAddr", path: "nextAddr.imm_SE" },
+  { id: "WireImmSE_NextAddr", path: "nextAddr.imm_SE" },
   { id: "WireBCC_NextAddr", path: "nextAddr.bcc" },
   { id: "WirePC4MSB_NextAddr", path: "nextAddr.pc4MSB" },
   { id: "WireCin_NextAddr", path: "nextAddr.cin" },
   { id: "WireIncrPC_NextAddr", path: "nextAddr.IncrPC" },
-  { id: "WireNextPC_NextAddr", path: "nextAddr.NextPC" }
+  { id: "WireNextPC_NextAddr", path: "nextAddr.NextPC" },
+  { id: "WireJTAFull_NextAddr", path: "nextAddr.jtaPC4" }
 
 ];
 
@@ -103,61 +105,11 @@ export default function NextAddrView({ onNavigate, onBack }) {
     });
   }, [svgReady, wireValues]);
 
-  useEffect(() => {
-    if (!svgReady) return;
-
-    const bcc = document.getElementById("BranchConditionChecker_NextAddr");
-    const adder = document.getElementById("Adder_NextAddr");
-    const mux4to1 = document.getElementById("MUX4to1_NextAddr");
-
-    const handleBCCClick = () => onNavigate("BranchCondCheck");
-    const handleAdderClick = () => onNavigate("Adder", { basePath: "nextAddr.adder" });
-    const handleMUX4to1Click = () => onNavigate("MUX4to1", { basePath: "nextAddr.mux" });
-
-    const handleBCCMouseEnter = () => {
-      if (bcc) bcc.style.opacity = '0.7';
-    };
-    const handleBCCMouseLeave = () => {
-      if (bcc) bcc.style.opacity = '1';
-    };
-    const handleAdderMouseEnter = () => {
-      if (adder) adder.style.opacity = '0.7';
-    };
-    const handleAdderMouseLeave = () => {
-      if (adder) adder.style.opacity = '1';
-    };
-    const handleMUX4to1MouseEnter = () => {
-      if (mux4to1) mux4to1.style.opacity = '0.7';
-    };
-    const handleMUX4to1MouseLeave = () => {
-      if (mux4to1) mux4to1.style.opacity = '1';
-    };
-
-    bcc?.addEventListener("click", handleBCCClick);
-    bcc?.addEventListener("mouseenter", handleBCCMouseEnter);
-    bcc?.addEventListener("mouseleave", handleBCCMouseLeave);
-    if (bcc) bcc.style.cursor = 'pointer';
-    adder?.addEventListener("click", handleAdderClick);
-    adder?.addEventListener("mouseenter", handleAdderMouseEnter);
-    adder?.addEventListener("mouseleave", handleAdderMouseLeave);
-    if (adder) adder.style.cursor = 'pointer';
-    mux4to1?.addEventListener("click", handleMUX4to1Click);
-    mux4to1?.addEventListener("mouseenter", handleMUX4to1MouseEnter);
-    mux4to1?.addEventListener("mouseleave", handleMUX4to1MouseLeave);
-    if (mux4to1) mux4to1.style.cursor = 'pointer';
-
-    return () => {
-      bcc?.removeEventListener("click", handleBCCClick);
-      bcc?.removeEventListener("mouseenter", handleBCCMouseEnter);
-      bcc?.removeEventListener("mouseleave", handleBCCMouseLeave);
-      adder?.removeEventListener("click", handleAdderClick);
-      adder?.removeEventListener("mouseenter", handleAdderMouseEnter);
-      adder?.removeEventListener("mouseleave", handleAdderMouseLeave);
-      mux4to1?.removeEventListener("click", handleMUX4to1Click);
-      mux4to1?.removeEventListener("mouseenter", handleMUX4to1MouseEnter);
-      mux4to1?.removeEventListener("mouseleave", handleMUX4to1MouseLeave);
-    };
-  }, [svgReady, onNavigate]);
+  useClickableElements(svgReady, [
+    { id: "BranchConditionChecker_NextAddr", onClick: () => onNavigate("BranchCondCheck") },
+    { id: "Adder_NextAddr", onClick: () => onNavigate("Adder", { basePath: "nextAddr.adder" }) },
+    { id: "MUX4to1_NextAddr", onClick: () => onNavigate("MUX4to1", { basePath: "nextAddr.mux" }) },
+  ], [onNavigate]);
 
   return (
     <div className="diagram-container" onClick={closeTooltip}>

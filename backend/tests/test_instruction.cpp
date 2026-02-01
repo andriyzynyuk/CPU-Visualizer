@@ -49,3 +49,14 @@ TEST(InstructionTest, ADD) {
     EXPECT_EQ(i.sh(), 0);
     EXPECT_EQ(i.fn(), 0b100000);
 }
+
+TEST(InstructionTest, SHIFT) {
+    Instruction i = Instruction::SLL(7, 8, 9);
+    
+    EXPECT_EQ(i.op(), 0);
+    EXPECT_EQ(i.rs(), 0);
+    EXPECT_EQ(i.rt(), 8);
+    EXPECT_EQ(i.rd(), 7);
+    EXPECT_EQ(i.sh(), 9);
+    EXPECT_EQ(i.fn(), 0);
+}

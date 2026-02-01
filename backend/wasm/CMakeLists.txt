@@ -32,7 +32,7 @@ target_link_options(cpu PRIVATE
     -sWASM=1
     -sMODULARIZE=1
     -sEXPORT_NAME=CPUWasm
-    -sEXPORTED_FUNCTIONS=_cpu_create,_cpu_destroy,_cpu_first_cycle,_cpu_execute_cycle,_cpu_load_instruction,_cpu_load_instructions,_cpu_get_wire_value,_instr_ADD,_instr_SUB,_instr_SLT,_instr_ADDI,_instr_SLTI,_instr_AND,_instr_OR,_instr_XOR,_instr_NOR,_instr_ANDI,_instr_ORI,_instr_XORI,_instr_JUMP,_instr_JR,_instr_BLTZ,_instr_BEQ,_instr_BNE,_instr_JAL
+    -sEXPORTED_FUNCTIONS=_cpu_create,_cpu_destroy,_cpu_first_cycle,_cpu_execute_cycle,_cpu_load_instruction,_cpu_load_instructions,_cpu_get_wire_value,_instr_ADD,_instr_SUB,_instr_SLT,_instr_ADDI,_instr_SLTI,_instr_AND,_instr_OR,_instr_XOR,_instr_NOR,_instr_ANDI,_instr_ORI,_instr_XORI,_instr_JUMP,_instr_JR,_instr_BLTZ,_instr_BEQ,_instr_BNE,_instr_JAL,_instr_SLL,_instr_SRL,_instr_SRA,_instr_SLLV,_instr_SRLV,_instr_SRAV
     -sEXPORTED_RUNTIME_METHODS=cwrap,ccall,HEAPU8,HEAPU32
     -sALLOW_MEMORY_GROWTH=1
 )

@@ -30,6 +30,14 @@ async function m() {
   const instr_JUMP = cwrap('instr_JUMP', 'number', ['number']);
   const instr_JAL  = cwrap('instr_JAL',  'number', ['number']);
 
+  // Shift Instructions
+  const instr_SLL  = cwrap('instr_SLL',  'number', ['number','number','number']);
+  const instr_SRL  = cwrap('instr_SRL',  'number', ['number','number','number']);
+  const instr_SRA  = cwrap('instr_SRA',  'number', ['number','number','number']);
+  const instr_SLLV = cwrap('instr_SLLV', 'number', ['number','number','number']);
+  const instr_SRLV = cwrap('instr_SRLV', 'number', ['number','number','number']);
+  const instr_SRAV = cwrap('instr_SRAV', 'number', ['number','number','number']);
+
   cached = {
     instr_ADD,
     instr_SUB,
@@ -49,6 +57,12 @@ async function m() {
     instr_BNE,
     instr_JUMP,
     instr_JAL,
+    instr_SLL,
+    instr_SRL,
+    instr_SRA,
+    instr_SLLV,
+    instr_SRLV,
+    instr_SRAV,
   };
   return cached;
 }

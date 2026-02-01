@@ -87,6 +87,31 @@ function parseInstruction(code, instrLib, labels, currentIndex, lineNum) {
         return instrLib.instr_XOR(rd, rs, rt);
       case 'nor':
         return instrLib.instr_NOR(rd, rs, rt);
+      case 'sllv':
+        return instrLib.instr_SLLV(rd, rt, rs);
+      case 'srlv':
+        return instrLib.instr_SRLV(rd, rt, rs);
+      case 'srav':
+        return instrLib.instr_SRAV(rd, rt, rs);
+      default:
+        break;
+    }
+  }
+  
+  const shiftImmMatch = trimmed.match(/^(sll|srl|sra)\s+(\d+)\s*,\s*(\d+)\s*,\s*(\d+)$/);
+  if (shiftImmMatch) {
+    const [, instr, arg1, arg2, arg3] = shiftImmMatch;
+    const rd = parseInt(arg1, 10);
+    const rt = parseInt(arg2, 10);
+    const sh = parseInt(arg3, 10);
+    
+    switch (instr) {
+      case 'sll':
+        return instrLib.instr_SLL(rd, rt, sh);
+      case 'srl':
+        return instrLib.instr_SRL(rd, rt, sh);
+      case 'sra':
+        return instrLib.instr_SRA(rd, rt, sh);
       default:
         break;
     }

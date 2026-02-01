@@ -13,11 +13,15 @@ struct ALU : Component {
     Wire* x;
     Wire* y;
     Wire* addSub;
-    Wire* shiftDirection;
+    Wire* constAmount;
+    Wire* constVar;
+    Wire* shiftFunc;
     Wire* logicFunc;
     Wire* funcClass;
 
     // Internal wires
+    Wire x5LSB;
+    Wire amount;
     Wire yXOR;
     Wire shiftedY;
     Wire xPlusY;
@@ -34,6 +38,7 @@ struct ALU : Component {
     Wire &Cout;
 
     // Gates
+    MUX2to1 shiftAmount;
     SignExtender se;
     XorGate xorGate;
     Shifter shifter;
@@ -43,8 +48,8 @@ struct ALU : Component {
     
 
 
-    ALU(Wire* X, Wire* Y, Wire* AddSub,
-        Wire* ShiftDirection, Wire* LogicFunc, Wire* FuncClass,
+    ALU(Wire* X, Wire* Y, Wire* AddSub, Wire* ConstAmount, Wire* ConstVar,
+        Wire* ShiftFunc, Wire* LogicFunc, Wire* FuncClass,
         Wire& S, Wire& COUT);
     void eval() override;
     uint32_t getWireByPath(const std::string& path);

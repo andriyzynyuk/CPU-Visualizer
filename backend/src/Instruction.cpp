@@ -122,6 +122,24 @@ Instruction Instruction::JAL(uint32_t jta) {
     return J(0b000011, jta);
 }
 
+Instruction Instruction::SLL(uint8_t rd, uint8_t rt, uint8_t sh) {
+    return R(0, 0, rt, rd, sh, 0);
+}
+Instruction Instruction::SRL(uint8_t rd, uint8_t rt, uint8_t sh) {
+    return R(0, 0, rt, rd, sh, 0b000010);
+}
+Instruction Instruction::SRA(uint8_t rd, uint8_t rt, uint8_t sh) {
+    return R(0, 0, rt, rd, sh, 0b000011);
+}
+Instruction Instruction::SLLV(uint8_t rd, uint8_t rt, uint8_t rs) {
+    return R(0, rs, rt, rd, 0, 0b000100);
+}
+Instruction Instruction::SRLV(uint8_t rd, uint8_t rt, uint8_t rs) {
+    return R(0, rs, rt, rd, 0, 0b000110);
+}
+Instruction Instruction::SRAV(uint8_t rd, uint8_t rt, uint8_t rs) {
+    return R(0, rs, rt, rd, 0, 0b000111);
+}
 // Instruction Instruction::SYSCALL() {
 //     return R(0, 0, 0, 0, 0, 0b001100);
 // }

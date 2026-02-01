@@ -107,7 +107,11 @@ function formatWireName(wireName) {
     .replace(/_LU$/, "")
     .replace(/_NextAddr$/, "")
     .replace(/_Shifter$/, "")
-    .replace(/_Adder$/, "");
+    .replace(/_Adder$/, "")
+    .replace(/_FullAdder$/, "")
+    .replace(/_MUX2to1$/, "")
+    .replace(/_MUX4to1$/, "")
+    .replace(/_BranchCondChecker$/, "");
   
   name = name.replace(/_/g, " ");
   

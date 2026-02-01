@@ -4,12 +4,14 @@ import remarkGfm from 'remark-gfm';
 import welcomeContent from '../docs/welcome.md?raw';
 import programContent from '../docs/program.md?raw';
 import plannedContent from '../docs/planned.md?raw';
+import changelogContent from '../../../CHANGELOG.md?raw';
 import './InfoPage.css';
 
 const tabs = [
   { id: 'welcome', label: 'Welcome', content: welcomeContent },
   { id: 'programming', label: 'Programming', content: programContent },
   { id: 'planned', label: 'Planned Changes', content: plannedContent },
+  { id: 'changelog', label: 'Changelog', content: changelogContent },
 ];
 
 export default function InfoPage({ onBack, initialTab = 'welcome' }) {

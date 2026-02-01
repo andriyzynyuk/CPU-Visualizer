@@ -48,6 +48,12 @@ struct Instruction {
     static Instruction BEQ(uint8_t rt, uint8_t rs, uint16_t imm);
     static Instruction BNE(uint8_t rt, uint8_t rs, uint16_t imm);
     static Instruction JAL(uint32_t jta);
+    static Instruction SLL(uint8_t rd, uint8_t rt, uint8_t sh);
+    static Instruction SRL(uint8_t rd, uint8_t rt, uint8_t sh);
+    static Instruction SRA(uint8_t rd, uint8_t rt, uint8_t sh);
+    static Instruction SLLV(uint8_t rd, uint8_t rt, uint8_t rs);
+    static Instruction SRLV(uint8_t rd, uint8_t rt, uint8_t rs);
+    static Instruction SRAV(uint8_t rd, uint8_t rt, uint8_t rs);
     //static Instruction SYSCALL();
     
     
